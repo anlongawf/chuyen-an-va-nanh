@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="vi" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Chuyện Của An & Nanh • Kỷ Niệm 3 Tháng & 20/10</title>
-  
+
   <!-- SEO & Social Meta -->
-  <meta name="description" content="Webtoon kỷ niệm 3 tháng tình yêu của An & Nanh - Món quà ngọt ngào, hài hước và lãng mạn nhân dịp 20/10">
+  <meta name="description"
+    content="Webtoon kỷ niệm 3 tháng tình yêu của An & Nanh - Món quà ngọt ngào, hài hước và lãng mạn nhân dịp 20/10">
   <meta property="og:title" content="Chuyện Của An & Nanh • 3 Tháng Yêu Nhau">
-  <meta property="og:description" content="Chuyện tình ngọt ngào từ những đêm đợi rep, tiếng hét 'Gì vậy cha nộiii' đến cái gật đầu trên xe máy Vũng Tàu.">
+  <meta property="og:description"
+    content="Chuyện tình ngọt ngào từ những đêm đợi rep, tiếng hét 'Gì vậy cha nộiii' đến cái gật đầu trên xe máy Vũng Tàu.">
   <meta name="theme-color" content="#ff758f">
 
   <!-- Tailwind CSS CDN -->
@@ -46,7 +49,9 @@
   <!-- Google Fonts: Mali, Patrick Hand, Quicksand -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Patrick+Hand&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Patrick+Hand&family=Quicksand:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
 
   <!-- Canvas Confetti Library -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
@@ -57,16 +62,20 @@
       width: 6px;
       height: 6px;
     }
+
     ::-webkit-scrollbar-track {
       background: #ffe5ec;
     }
+
     ::-webkit-scrollbar-thumb {
       background: #ff758f;
       border-radius: 9999px;
     }
+
     .no-scrollbar::-webkit-scrollbar {
       display: none;
     }
+
     .no-scrollbar {
       -ms-overflow-style: none;
       scrollbar-width: none;
@@ -89,6 +98,7 @@
       overflow: hidden;
       transition: all 0.25s ease;
     }
+
     .webtoon-panel:hover {
       transform: translateY(-2px);
       box-shadow: 7px 7px 0px 0px #1a1c2e;
@@ -105,6 +115,7 @@
       font-weight: 600;
       box-shadow: 3px 3px 0px 0px rgba(26, 28, 46, 0.8);
     }
+
     .speech-bubble.tail-bottom::after {
       content: '';
       position: absolute;
@@ -116,6 +127,7 @@
       display: block;
       width: 0;
     }
+
     .speech-bubble.tail-bottom::before {
       content: '';
       position: absolute;
@@ -139,9 +151,15 @@
       box-shadow: 4px 4px 0px 0px #c9184a;
       animation: shake 0.6s infinite alternate ease-in-out;
     }
+
     @keyframes shake {
-      0% { transform: rotate(-1deg) scale(0.99); }
-      100% { transform: rotate(1deg) scale(1.01); }
+      0% {
+        transform: rotate(-1deg) scale(0.99);
+      }
+
+      100% {
+        transform: rotate(1deg) scale(1.01);
+      }
     }
 
     /* Sound Effect Text (SFX) */
@@ -162,15 +180,18 @@
       font-size: 24px;
       filter: drop-shadow(0 2px 4px rgba(201, 24, 74, 0.3));
     }
+
     @keyframes floatUpFade {
       0% {
         opacity: 1;
         transform: translate(-50%, -50%) scale(0.6) rotate(0deg);
       }
+
       50% {
         opacity: 0.95;
         transform: translate(-50%, -100px) scale(1.2) rotate(-15deg);
       }
+
       100% {
         opacity: 0;
         transform: translate(-50%, -180px) scale(0.8) rotate(15deg);
@@ -179,9 +200,17 @@
 
     /* Floating Background Emojis */
     @keyframes floatSlow {
-      0%, 100% { transform: translateY(0px) rotate(0deg); }
-      50% { transform: translateY(-12px) rotate(6deg); }
+
+      0%,
+      100% {
+        transform: translateY(0px) rotate(0deg);
+      }
+
+      50% {
+        transform: translateY(-12px) rotate(6deg);
+      }
     }
+
     .float-slow {
       animation: floatSlow 4s ease-in-out infinite;
     }
@@ -198,17 +227,40 @@
       border-radius: 9999px;
       animation: soundWave 0.8s ease-in-out infinite alternate;
     }
-    .bar:nth-child(1) { height: 7px; animation-delay: 0.1s; }
-    .bar:nth-child(2) { height: 16px; animation-delay: 0.3s; }
-    .bar:nth-child(3) { height: 11px; animation-delay: 0.2s; }
-    .bar:nth-child(4) { height: 18px; animation-delay: 0.4s; }
+
+    .bar:nth-child(1) {
+      height: 7px;
+      animation-delay: 0.1s;
+    }
+
+    .bar:nth-child(2) {
+      height: 16px;
+      animation-delay: 0.3s;
+    }
+
+    .bar:nth-child(3) {
+      height: 11px;
+      animation-delay: 0.2s;
+    }
+
+    .bar:nth-child(4) {
+      height: 18px;
+      animation-delay: 0.4s;
+    }
+
     .music-paused .bar {
       animation-play-state: paused;
       height: 4px !important;
     }
+
     @keyframes soundWave {
-      0% { height: 4px; }
-      100% { height: 18px; }
+      0% {
+        height: 4px;
+      }
+
+      100% {
+        height: 18px;
+      }
     }
 
     /* Polaroid Styles */
@@ -221,10 +273,12 @@
       transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
       cursor: pointer;
     }
+
     .polaroid-card:hover {
       transform: translateY(-4px) scale(1.02);
       box-shadow: 0 12px 25px -4px rgba(201, 24, 74, 0.2);
     }
+
     .washi-tape {
       position: absolute;
       top: -8px;
@@ -244,6 +298,7 @@
       transform: translateY(24px);
       transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     }
+
     .reveal-panel.is-visible {
       opacity: 1;
       transform: translateY(0);
@@ -282,11 +337,13 @@
   </div>
 
   <!-- Floating Sticky Header Controls -->
-  <header class="fixed top-3 left-0 right-0 z-40 px-3 max-w-md mx-auto flex items-center justify-between pointer-events-none">
-    
+  <header
+    class="fixed top-3 left-0 right-0 z-40 px-3 max-w-md mx-auto flex items-center justify-between pointer-events-none">
+
     <!-- Music Player Controller Pill -->
-    <div class="pointer-events-auto bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-full border-2 border-pink-300 shadow-comic-sm flex items-center gap-2 cursor-pointer transition active:scale-95" 
-         id="musicBtn" onclick="toggleAudio(event)" title="Bật/Tắt nhạc nền Ngỡ Ngàng">
+    <div
+      class="pointer-events-auto bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-full border-2 border-pink-300 shadow-comic-sm flex items-center gap-2 cursor-pointer transition active:scale-95"
+      id="musicBtn" onclick="toggleAudio(event)" title="Bật/Tắt nhạc nền Ngỡ Ngàng">
       <div id="musicBars" class="flex items-end gap-0.5 h-4 music-paused">
         <div class="bar"></div>
         <div class="bar"></div>
@@ -294,23 +351,27 @@
         <div class="bar"></div>
       </div>
       <div class="flex flex-col text-left">
-        <span class="text-[9px] font-bold text-deepLove uppercase tracking-wider font-comic leading-none">Nhạc nền</span>
+        <span class="text-[9px] font-bold text-deepLove uppercase tracking-wider font-comic leading-none">Nhạc
+          nền</span>
         <span id="musicText" class="text-[10px] font-semibold text-slate-700 leading-none mt-0.5">Bật nhạc</span>
       </div>
     </div>
 
     <!-- Quick Floating Heart Button -->
-    <div class="pointer-events-auto bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-full border-2 border-pink-300 shadow-comic-sm flex items-center gap-1.5 cursor-pointer transition active:scale-95 hover:bg-pink-50"
-         onclick="burstHeartsCenter(event)" title="Thả tim cho An & Nanh">
+    <div
+      class="pointer-events-auto bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-full border-2 border-pink-300 shadow-comic-sm flex items-center gap-1.5 cursor-pointer transition active:scale-95 hover:bg-pink-50"
+      onclick="burstHeartsCenter(event)" title="Thả tim cho An & Nanh">
       <span class="text-base animate-pulse">💖</span>
       <span class="text-xs font-bold text-deepLove font-comic">Thả tim</span>
     </div>
   </header>
 
   <!-- Autoplay Prompt Toast (Mobile Friendly) -->
-  <div id="musicToast" class="hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-slate-900/90 text-white text-xs px-4 py-2.5 rounded-full shadow-2xl flex items-center gap-2 border border-pink-400/50 backdrop-blur-md">
+  <div id="musicToast"
+    class="hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-slate-900/90 text-white text-xs px-4 py-2.5 rounded-full shadow-2xl flex items-center gap-2 border border-pink-400/50 backdrop-blur-md">
     <span>🎵 Chạm vào màn hình để phát nhạc "Ngỡ Ngàng" nha!</span>
-    <button onclick="triggerMusicStart(event)" class="bg-pink-500 hover:bg-pink-600 text-white font-bold px-2.5 py-0.5 rounded-full text-[10px]">
+    <button onclick="triggerMusicStart(event)"
+      class="bg-pink-500 hover:bg-pink-600 text-white font-bold px-2.5 py-0.5 rounded-full text-[10px]">
       Nghe ngay
     </button>
   </div>
@@ -324,9 +385,10 @@
     <!-- BÌA TRUYỆN WEBTOON (HERO COVER)                                           -->
     <!-- ========================================================================= -->
     <section class="px-4 text-center relative pt-4 pb-8">
-      
+
       <!-- Manhwa Title Badge -->
-      <div class="inline-flex items-center gap-1.5 bg-white border-2 border-deepLove text-deepLove px-3.5 py-1 rounded-full text-xs font-extrabold uppercase tracking-widest shadow-comic-sm font-comic mb-4">
+      <div
+        class="inline-flex items-center gap-1.5 bg-white border-2 border-deepLove text-deepLove px-3.5 py-1 rounded-full text-xs font-extrabold uppercase tracking-widest shadow-comic-sm font-comic mb-4">
         <span>✨ WEBTOON KỶ NIỆM 3 THÁNG ✨</span>
       </div>
 
@@ -343,22 +405,29 @@
       </p>
 
       <!-- Romantic Date Counter Pill -->
-      <div class="mt-4 inline-flex items-center gap-2 bg-gradient-to-r from-pink-100 via-rose-100 to-pink-100 border-2 border-pink-300 rounded-2xl px-4 py-2 shadow-sm">
+      <div
+        class="mt-4 inline-flex items-center gap-2 bg-gradient-to-r from-pink-100 via-rose-100 to-pink-100 border-2 border-pink-300 rounded-2xl px-4 py-2 shadow-sm">
         <span class="text-lg">🗓️</span>
         <div class="text-left">
           <p class="text-[10px] font-extrabold text-pink-600 uppercase tracking-wider">Cột mốc đặc biệt</p>
-          <p class="text-xs font-bold text-slate-800 font-comic">20/07/2026 ➔ 20/10/2026 (3 Tháng Tròn)</p>
+          <p class="text-xs font-bold text-slate-800 font-comic">18/07/2026 ➔ 18/10/2026 (3 Tháng Tròn)</p>
         </div>
       </div>
 
       <!-- Hero Webtoon Cover Art Frame -->
-      <div class="mt-6 webtoon-panel p-2 bg-gradient-to-b from-rose-100 via-pink-50 to-white shadow-comic-lg transform rotate-0 hover:rotate-1 transition-transform">
-        <div class="relative h-64 rounded-xl overflow-hidden bg-gradient-to-b from-pink-200 via-rose-100 to-amber-50 flex items-center justify-center">
+      <div
+        class="mt-6 webtoon-panel p-2 bg-gradient-to-b from-rose-100 via-pink-50 to-white shadow-comic-lg transform rotate-0 hover:rotate-1 transition-transform">
+        <div
+          class="relative h-64 rounded-xl overflow-hidden bg-gradient-to-b from-pink-200 via-rose-100 to-amber-50 flex items-center justify-center">
           <img src="chibi_chap4_hug.jpg" alt="An và Nanh" class="w-full h-full object-cover">
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent flex items-end p-4">
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent flex items-end p-4">
             <div class="text-left text-white">
-              <span class="text-[10px] uppercase font-bold tracking-widest bg-deepLove px-2 py-0.5 rounded font-comic">Tác giả: An Phan</span>
-              <p class="text-xs font-semibold text-pink-200 mt-1">Dành tặng cho người con gái đặc biệt nhất • Nanh 🌸</p>
+              <span
+                class="text-[10px] uppercase font-bold tracking-widest bg-deepLove px-2 py-0.5 rounded font-comic">Tác
+                giả: An Phan</span>
+              <p class="text-xs font-semibold text-pink-200 mt-1">Dành tặng cho người con gái đặc biệt nhất • Nanh 🌸
+              </p>
             </div>
           </div>
         </div>
@@ -378,7 +447,8 @@
 
       <!-- Chapter Banner -->
       <div class="chapter-banner rounded-2xl py-3 px-4 shadow-md text-center">
-        <span class="text-[10px] tracking-widest font-extrabold uppercase bg-white/20 px-2.5 py-0.5 rounded-full font-comic">
+        <span
+          class="text-[10px] tracking-widest font-extrabold uppercase bg-white/20 px-2.5 py-0.5 rounded-full font-comic">
           CHƯƠNG 01
         </span>
         <h2 class="text-lg sm:text-xl font-bold font-comic mt-1 leading-tight">
@@ -388,15 +458,18 @@
 
       <!-- PANEL 1: Ngày em bước đến -->
       <div class="webtoon-panel reveal-panel">
-        <div class="p-3 bg-gradient-to-b from-amber-50 to-rose-50 border-b-2 border-dashed border-pink-200 flex items-center justify-between">
+        <div
+          class="p-3 bg-gradient-to-b from-amber-50 to-rose-50 border-b-2 border-dashed border-pink-200 flex items-center justify-between">
           <span class="text-[10px] font-bold text-deepLove bg-pink-100 px-2 py-0.5 rounded-md uppercase font-comic">
             #1 • Nắng ấm
           </span>
           <span class="sfx-text text-pink-600 text-xs">*Ting ting~*</span>
         </div>
 
-        <div class="relative h-44 bg-gradient-to-tr from-amber-100 via-rose-100 to-pink-200 flex items-center justify-center overflow-hidden">
-          <div class="w-20 h-20 rounded-full bg-gradient-to-tr from-amber-400 to-yellow-200 shadow-lg flex items-center justify-center animate-pulse">
+        <div
+          class="relative h-44 bg-gradient-to-tr from-amber-100 via-rose-100 to-pink-200 flex items-center justify-center overflow-hidden">
+          <div
+            class="w-20 h-20 rounded-full bg-gradient-to-tr from-amber-400 to-yellow-200 shadow-lg flex items-center justify-center animate-pulse">
             <span class="text-4xl">☀️</span>
           </div>
           <div class="absolute top-4 left-6 text-xl animate-bounce">🌸</div>
@@ -405,34 +478,40 @@
         </div>
 
         <div class="p-4 bg-white">
-          <div class="p-3 bg-pink-50/70 rounded-xl border border-pink-200 text-xs sm:text-sm text-pink-900 leading-relaxed font-medium">
-            <span class="text-deepLove font-bold text-sm block mb-1">🌤️ Ngày em đến:</span>
-            "Cảm ơn em đã bước vào thế giới của anh vào một ngày nắng thật đẹp, mang theo nụ cười làm xao xuyến cả một góc trời."
+          <div
+            class="p-3 bg-pink-50/70 rounded-xl border border-pink-200 text-xs sm:text-sm text-pink-900 leading-relaxed font-medium">
+            <span class="text-deepLove font-bold text-sm block mb-1">🌤️ Khởi đầu ngọt ngào:</span>
+            "Câu chuyện bắt đầu vào một ngày nắng trong trẻo, khi cô gái với nụ cười rạng rỡ bất ngờ xuất hiện, làm bừng sáng cả thế giới vốn dĩ êm đềm của chàng trai..."
           </div>
         </div>
       </div>
 
       <!-- PANEL 2: Giông bão cùng nhau -->
       <div class="webtoon-panel reveal-panel">
-        <div class="p-3 bg-gradient-to-b from-slate-100 to-blue-50 border-b-2 border-dashed border-blue-200 flex items-center justify-between">
+        <div
+          class="p-3 bg-gradient-to-b from-slate-100 to-blue-50 border-b-2 border-dashed border-blue-200 flex items-center justify-between">
           <span class="text-[10px] font-bold text-blue-700 bg-blue-100 px-2 py-0.5 rounded-md uppercase font-comic">
             #2 • Giông bão
           </span>
           <span class="sfx-text text-blue-600 text-xs">*Rì rào~*</span>
         </div>
 
-        <div class="relative h-44 bg-gradient-to-b from-slate-700 via-slate-600 to-blue-900 flex items-center justify-center overflow-hidden text-center">
+        <div
+          class="relative h-44 bg-gradient-to-b from-slate-700 via-slate-600 to-blue-900 flex items-center justify-center overflow-hidden text-center">
           <div class="z-10">
             <div class="text-5xl filter drop-shadow-lg mb-2 animate-pulse">☔</div>
-            <div class="inline-block bg-white/90 backdrop-blur-md px-3.5 py-1 rounded-full text-xs font-bold text-slate-800 shadow">
+            <div
+              class="inline-block bg-white/90 backdrop-blur-md px-3.5 py-1 rounded-full text-xs font-bold text-slate-800 shadow">
               Có Nanh ở đây rồi 💕
             </div>
           </div>
         </div>
 
         <div class="p-4 bg-white">
-          <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 text-xs sm:text-sm text-slate-800 leading-relaxed font-medium">
-            "...và cảm ơn em vì vẫn chọn ở lại đây cùng anh, đi qua cả những ngày dở chứng giông bão hihi."
+          <div
+            class="p-3 bg-slate-50 rounded-xl border border-slate-200 text-xs sm:text-sm text-slate-800 leading-relaxed font-medium">
+            <span class="text-slate-800 font-bold text-sm block mb-1">🌧️ Cùng nhau qua giông bão:</span>
+            "Giữa những ngày thời tiết dở chứng, giông bão bất chợt kéo đến, nhưng hai người vẫn chọn nép lại gần nhau, cùng che chung chiếc ô đi qua những thử thách đầu tiên."
           </div>
         </div>
       </div>
@@ -457,9 +536,10 @@
             "Màn hình sáng một cái là tim thót lại... Vậy mà ai kia Seen 3 tiếng chưa thèm rep luôn trời ơiii! 😭💔"
           </div>
 
-          <div class="p-3 bg-indigo-50/70 rounded-xl border border-indigo-200 text-xs sm:text-sm text-indigo-950 leading-relaxed font-medium">
-            <span class="font-bold text-indigo-800 block mb-1">📱 Canh me từng giây từng phút:</span>
-            "Nhớ hồi mới tìm hiểu nhau, An cầm khư khư điện thoại canh me từng giây. Đợi mòn mỏi ruột gan quặn thắt gì đâu á! Mới có 3 tháng thôi mà trải qua đủ mọi thang bậc cảm xúc luôn qué Nanh ơi!"
+          <div
+            class="p-3 bg-indigo-50/70 rounded-xl border border-indigo-200 text-xs sm:text-sm text-indigo-950 leading-relaxed font-medium">
+            <span class="font-bold text-indigo-800 block mb-1">📱 Vụ án 'Đã xem' lúc 2:00 AM:</span>
+            "Thuở mới vừa tìm hiểu, chàng trai lúc nào cũng dán chặt mắt vào chiếc điện thoại, nín thở đếm từng giây từng phút. Màn hình vừa lóe sáng thì tim muốn nhảy ra ngoài, để rồi ngậm ngùi nhìn dòng trạng thái 'Đã xem suốt 3 tiếng ròng'... Ruột gan cồn cào, trải qua đủ mọi cung bậc cảm xúc của một kẻ đang tương tư!"
           </div>
         </div>
       </div>
@@ -473,7 +553,8 @@
 
       <!-- Chapter Banner -->
       <div class="chapter-banner rounded-2xl py-3 px-4 shadow-md text-center">
-        <span class="text-[10px] tracking-widest font-extrabold uppercase bg-white/20 px-2.5 py-0.5 rounded-full font-comic">
+        <span
+          class="text-[10px] tracking-widest font-extrabold uppercase bg-white/20 px-2.5 py-0.5 rounded-full font-comic">
           CHƯƠNG 02
         </span>
         <h2 class="text-lg sm:text-xl font-bold font-comic mt-1 leading-tight">
@@ -483,7 +564,8 @@
 
       <!-- PANEL 4: Nhường nhịn & Thấu hiểu -->
       <div class="webtoon-panel reveal-panel">
-        <div class="p-3 bg-gradient-to-b from-amber-50 to-pink-50 border-b-2 border-dashed border-pink-200 flex items-center justify-between">
+        <div
+          class="p-3 bg-gradient-to-b from-amber-50 to-pink-50 border-b-2 border-dashed border-pink-200 flex items-center justify-between">
           <span class="text-[10px] font-bold text-amber-800 bg-amber-100 px-2 py-0.5 rounded-md uppercase font-comic">
             #4 • Nhường nhịn & Thấu hiểu
           </span>
@@ -499,8 +581,10 @@
         </div>
 
         <div class="p-4 bg-white border-t border-pink-100">
-          <div class="p-3 bg-amber-50/70 rounded-xl border border-amber-200 text-xs sm:text-sm text-amber-950 leading-relaxed font-medium">
-            "An xin lỗi vì những lúc vô ý làm Nanh buồn hay giận. An biết ơn lémmm mấy lúc Nanh chịu nhường nhịn, hạ mình xuống vì An và vì hai đứa."
+          <div
+            class="p-3 bg-amber-50/70 rounded-xl border border-amber-200 text-xs sm:text-sm text-amber-950 leading-relaxed font-medium">
+            <span class="font-bold text-amber-900 block mb-1">✨ Nốt lặng dịu dàng:</span>
+            "Tình yêu không chỉ toàn màu hồng, cũng có đôi lúc sự vô ý vô tứ khiến đối phương chạnh lòng. Nhưng may mắn thay, cô gái rất tinh tế, biết nhường nhịn và thấu hiểu đúng lúc đúng chỗ để cả hai cùng nắm tay bước tiếp."
           </div>
         </div>
       </div>
@@ -516,7 +600,8 @@
 
         <!-- Chibi Illustration Chapter 2 -->
         <div class="relative overflow-hidden bg-rose-50">
-          <img src="chibi_chap2_bach_dang.jpg" alt="Khoảnh khắc Gì vậy cha nội ở nhà sách Bạch Đằng" class="w-full h-auto object-cover">
+          <img src="chibi_chap2_bach_dang.jpg" alt="Khoảnh khắc Gì vậy cha nội ở nhà sách Bạch Đằng"
+            class="w-full h-auto object-cover">
         </div>
 
         <div class="p-4 bg-white space-y-3">
@@ -525,15 +610,17 @@
             <p class="text-base sm:text-lg font-extrabold font-comic uppercase tracking-wide">
               ⚡ "GÌ VẬY CHA NỘIII?! ĐI RAAAAA!" ⚡
             </p>
-            <span class="text-[10px] font-bold uppercase bg-rose-200 text-rose-800 px-2 py-0.5 rounded-full inline-block mt-1">
+            <span
+              class="text-[10px] font-bold uppercase bg-rose-200 text-rose-800 px-2 py-0.5 rounded-full inline-block mt-1">
               *Hét to chấn động cả nhà sách Bạch Đằng*
             </span>
           </div>
 
           <!-- Dòng tự sự hài hước -->
-          <div class="p-3 bg-rose-50/70 rounded-xl border border-rose-200 text-xs sm:text-sm text-pink-950 leading-relaxed font-medium">
-            <span class="font-bold text-deepLove block mb-1">🗿 An biến thành tượng đá:</span>
-            "Vừa chạm nhẹ vào vai định tạo bất ngờ, ai dè bị Nanh hét toáng lên đuổi đi! Lúc đó vừa quê vừa buồn vãiii, bụng bảo dạ phen này toang thật rồi kkk!"
+          <div
+            class="p-3 bg-rose-50/70 rounded-xl border border-rose-200 text-xs sm:text-sm text-pink-950 leading-relaxed font-medium">
+            <span class="font-bold text-deepLove block mb-1">🗿 Tiếng thét chấn động Bạch Đằng:</span>
+            "Buổi hẹn hò tưởng chừng êm đềm tại nhà sách Bạch Đằng, chàng trai rón rén chạm nhẹ vào vai định làm đối phương bất ngờ. Nào ngờ một tiếng thét vang dội 'GÌ VẬY CHA NỘIII?!' khiến cả nhà sách sững sờ! Chàng trai hóa đá tại chỗ, vừa quê vừa hoang mang tột độ, ngỡ như mối duyên này coi như toang thật rồi..."
           </div>
         </div>
       </div>
@@ -547,7 +634,8 @@
 
       <!-- Chapter Banner -->
       <div class="chapter-banner rounded-2xl py-3 px-4 shadow-md text-center">
-        <span class="text-[10px] tracking-widest font-extrabold uppercase bg-white/20 px-2.5 py-0.5 rounded-full font-comic">
+        <span
+          class="text-[10px] tracking-widest font-extrabold uppercase bg-white/20 px-2.5 py-0.5 rounded-full font-comic">
           CHƯƠNG 03
         </span>
         <h2 class="text-lg sm:text-xl font-bold font-comic mt-1 leading-tight">
@@ -564,7 +652,8 @@
           <span class="sfx-text text-yellow-300 text-xs">*Côm cốp!! Côm cốp!!*</span>
         </div>
 
-        <div class="p-4 bg-gradient-to-b from-cyan-900 to-slate-900 text-white relative overflow-hidden text-center py-6">
+        <div
+          class="p-4 bg-gradient-to-b from-cyan-900 to-slate-900 text-white relative overflow-hidden text-center py-6">
           <div class="flex items-center justify-center gap-3 text-4xl mb-2">
             <span class="animate-bounce">🐟</span>
             <span class="text-2xl animate-spin">🪙</span>
@@ -579,9 +668,10 @@
         </div>
 
         <div class="p-4 bg-white border-t border-cyan-100">
-          <div class="p-3 bg-cyan-50/70 rounded-xl border border-cyan-200 text-xs sm:text-sm text-cyan-950 leading-relaxed font-medium">
-            <span class="font-bold text-teal-800 block mb-1">🎮 Nghiện bắn cá Satra từ 7 - 8h sáng:</span>
-            "Sau vụ 'Gì vậy cha nộiii', phát hiện ra Nanh bị nghiện bắn cá ở Satra giai đoạn này kkk! Nhớ có lúc mới 7 - 8h sáng tinh mơ hai đứa đã dắt nhau qua Satra đập phím côm cốp, càn quét máy game quá trời quá đất vui gì đâu á!"
+          <div
+            class="p-3 bg-cyan-50/70 rounded-xl border border-cyan-200 text-xs sm:text-sm text-cyan-950 leading-relaxed font-medium">
+            <span class="font-bold text-teal-800 block mb-1">🎮 Bí mật của 'Chiến Thần Bắn Cá':</span>
+            "Tưởng chừng xa cách sau cú thét định mệnh, ai ngờ số phận lại mở ra một cú ngoặt bất ngờ: Hóa ra cô nàng lại là một 'chiến thần bắn cá' chính hiệu! Mới 7 - 8 giờ sáng tinh mơ, hai cô cậu đã dắt díu nhau sang Satra, đập phím côm cốp, xèng bay tung tóe vui quên cả lối về."
           </div>
         </div>
       </div>
@@ -605,9 +695,10 @@
             "Miệng run cầm cập, tim đập thình thịch như muốn nhảy ra ngoài... nhưng thật lòng yêu Nanh nhiều lắm!"
           </div>
 
-          <div class="p-3 bg-purple-50/70 rounded-xl border border-purple-200 text-xs sm:text-sm text-purple-950 leading-relaxed font-medium">
-            <span class="font-bold text-purple-900 block mb-1">🛵 Lời tỏ tình trên đường về:</span>
-            "An gom hết can đảm tỏ tình trên đoạn đường xe máy chở Nanh về lúc đêm muộn. Tiếng gió thổi mát rượi, tim đập thình thịch vù vù... Nanh khẽ ôm eo rồi tựa đầu vào lưng An gật đầu đồng ý. Cảm giác lúc đó như muốn bay luôn cả người lẫn xe lên trời vì sướng á!"
+          <div
+            class="p-3 bg-purple-50/70 rounded-xl border border-purple-200 text-xs sm:text-sm text-purple-950 leading-relaxed font-medium">
+            <span class="font-bold text-purple-900 block mb-1">🛵 Khoảnh khắc định mệnh trên phố đêm:</span>
+            "Trên chiếc xe máy lướt đi giữa phố đêm lộng gió, chàng trai gom hết can đảm của cuộc đời để ngỏ lời yêu. Giây phút cô gái khẽ siết nhẹ vòng eo rồi tựa đầu vào lưng chàng trai gật đồng ý, dường như cả thế giới xung quanh bỗng chốc ngưng đọng trong niềm hạnh phúc vỡ òa."
           </div>
         </div>
       </div>
@@ -623,26 +714,30 @@
 
         <!-- Chibi Illustration TikTok Quê -->
         <div class="relative overflow-hidden bg-slate-950">
-          <img src="chibi_tiktok_que.jpg" alt="Pha quê xệ TikTok của An sau khi tỏ tình" class="w-full h-auto object-cover">
+          <img src="chibi_tiktok_que.jpg" alt="Pha quê xệ TikTok của An sau khi tỏ tình"
+            class="w-full h-auto object-cover">
         </div>
 
         <div class="p-4 bg-white space-y-3">
           <!-- Dialogue Bubbles -->
           <div class="space-y-2">
             <div class="speech-bubble tail-left bg-blue-50 border-blue-400 text-blue-900 text-xs font-semibold">
-              👦 <strong>An (lẻ nhài phân bua):</strong> "Ủa em coi nè! Người ta ghi là 'biến trước mặt' chứ đâu có biến thái gì đâuu, anh thề là hong có mà!!"
+              👦 <strong>An (lẻ nhài phân bua):</strong> "Ủa em coi nè! Người ta ghi là 'biến trước mặt' chứ đâu có biến
+              thái gì đâuu, anh thề là hong có mà!!"
             </div>
             <div class="speech-bubble tail-right bg-rose-50 border-pink-400 text-rose-900 text-xs font-semibold">
               👧 <strong>Nanh (cười mỉm nghi hoặc):</strong> "Đâu? Đưa điện thoại đây em coi lại xem nào..."
             </div>
-            <div class="speech-bubble tail-left bg-yellow-50 border-amber-400 text-amber-900 text-xs font-bold text-center">
+            <div
+              class="speech-bubble tail-left bg-yellow-50 border-amber-400 text-amber-900 text-xs font-bold text-center">
               📱 <strong>Màn hình TikTok hiện rõ mồn một:</strong> "...BIẾN VÔ MẶT" 🔞🙈
             </div>
           </div>
 
-          <div class="p-3 bg-rose-50/80 rounded-xl border border-rose-200 text-xs sm:text-sm text-rose-950 leading-relaxed font-medium">
-            <span class="font-bold text-rose-800 block mb-1">🤦‍♂️ Sự tích lèm bèm thanh minh và cái kết quê độ:</span>
-            "Vừa mới tỏ tình xong có một chuyện cười bể bụng: An lướt TikTok thấy clip 18+ ghi 'biến vô mặt' mà mắt mũi thế nào nhìn lộn thành <em>'biến trước mặt'</em>! Thế là An cứ lèm nhẻm lèm bèm lẻ nhài lẻ nhải giải thích bảo vệ sự trong sáng với Nanh là mình không hề biến thái... Đến lúc hai đứa lấy điện thoại ra coi lại từng chữ thì... ôi thôi, An bị quê một cục muốn xỉu, còn Nanh thì cười khoái chí quá trời quá đất kkk! 😂"
+          <div
+            class="p-3 bg-rose-50/80 rounded-xl border border-rose-200 text-xs sm:text-sm text-rose-950 leading-relaxed font-medium">
+            <span class="font-bold text-rose-800 block mb-1">🤦‍♂️ Cú lừa TikTok & Pha quê xệ để đời:</span>
+            "Vừa bước vào giai đoạn người yêu chưa được bao lâu thì biến cố dở khóc dở cười ập đến: Lướt trúng một clip TikTok 18+, chàng trai nhìn lướt thế nào lại đọc dòng chữ 'biến vô mặt' thành <em>'biến trước mặt'</em>! Suốt cả buổi, chàng trai cứ lẻ nhài lẻ nhải, phân bua sống chết để giữ gìn hình tượng trong sáng. Cho đến khi chiếc điện thoại được đưa ra soi kỹ từng chữ... Một pha 'quê xệ' kinh điển đi vào lịch sử, đổi lại tràng cười không dứt cho cả hai! 😂"
           </div>
         </div>
       </div>
@@ -656,7 +751,8 @@
 
       <!-- Chapter Banner -->
       <div class="chapter-banner rounded-2xl py-3 px-4 shadow-md text-center">
-        <span class="text-[10px] tracking-widest font-extrabold uppercase bg-white/20 px-2.5 py-0.5 rounded-full font-comic">
+        <span
+          class="text-[10px] tracking-widest font-extrabold uppercase bg-white/20 px-2.5 py-0.5 rounded-full font-comic">
           CHƯƠNG 04
         </span>
         <h2 class="text-lg sm:text-xl font-bold font-comic mt-1 leading-tight">
@@ -666,7 +762,8 @@
 
       <!-- PANEL 8 (CHIBI FULL PANEL): Cái ôm đầu tiên trọn vẹn -->
       <div class="webtoon-panel reveal-panel border-4 border-deepLove shadow-2xl">
-        <div class="p-3 bg-gradient-to-r from-pink-500 via-rose-500 to-deepLove text-white flex items-center justify-between">
+        <div
+          class="p-3 bg-gradient-to-r from-pink-500 via-rose-500 to-deepLove text-white flex items-center justify-between">
           <span class="text-[10px] font-bold bg-white/20 px-2 py-0.5 rounded uppercase font-comic">
             #8 • Cực Đại Cảm Xúc
           </span>
@@ -680,12 +777,14 @@
 
         <div class="p-4 bg-white space-y-3">
           <div class="speech-bubble tail-bottom bg-rose-50 border-rose-400 text-deepLove text-xs">
-            "Từ đứa đợi rep héo mòn, giờ được ôm em trọn vẹn trong vòng tay... Cảm giác ấm áp mê man muốn xỉu luôn hehe! 🫂💖"
+            "Từ đứa đợi rep héo mòn, giờ được ôm em trọn vẹn trong vòng tay... Cảm giác ấm áp mê man muốn xỉu luôn hehe!
+            🫂💖"
           </div>
 
-          <div class="p-3 bg-rose-50/70 rounded-xl border border-rose-200 text-xs sm:text-sm text-pink-950 leading-relaxed font-medium">
-            <span class="font-bold text-deepLove block mb-1">🌅 Hứa cùng nhau đi thật xa:</span>
-            "Cảm ơn Nanh vì 3 tháng qua đã chịu đựng và yêu thương An nhiều tới vậy. Chặng đường phía trước của tụi mình, hai đứa cứ tiếp tục nắm tay nhau đi qua thêm thật nhiều chương mới nữa nghen em!"
+          <div
+            class="p-3 bg-rose-50/70 rounded-xl border border-rose-200 text-xs sm:text-sm text-pink-950 leading-relaxed font-medium">
+            <span class="font-bold text-deepLove block mb-1">🌅 Khép lại 3 tháng & Mở ra chương mới:</span>
+            "Từ những đêm dài thắc thỏm đợi tin nhắn, qua bao tình huống dở khóc dở cười, cuối cùng họ đã tìm thấy nhau trong một cái ôm ấm áp và trọn vẹn. Ba tháng đầu tiên khép lại với hàng ngàn khoảnh khắc vô giá, mở ra một hành trình dài phía trước nơi hai trái tim cùng chung một nhịp đập."
           </div>
         </div>
       </div>
@@ -695,11 +794,13 @@
     <!-- ========================================================================= -->
     <!-- BẢO TÀNG KỶ NIỆM 3 THÁNG: TOÀN BỘ 29 ẢNH THẬT ĐÃ ĐƯỢC CHUẨN HÓA 100%      -->
     <!-- ========================================================================= -->
-    <section id="museum" class="mt-14 px-3 py-8 bg-gradient-to-b from-rose-50 via-pink-50/50 to-white rounded-3xl border-2 border-dashed border-deepLove mx-2">
-      
+    <section id="museum"
+      class="mt-14 px-3 py-8 bg-gradient-to-b from-rose-50 via-pink-50/50 to-white rounded-3xl border-2 border-dashed border-deepLove mx-2">
+
       <!-- Section Title & Intro -->
       <div class="text-center mb-6">
-        <span class="text-[11px] font-extrabold uppercase bg-deepLove text-white px-3.5 py-1 rounded-full tracking-wider font-comic shadow">
+        <span
+          class="text-[11px] font-extrabold uppercase bg-deepLove text-white px-3.5 py-1 rounded-full tracking-wider font-comic shadow">
           📸 BẢO TÀNG KỶ NIỆM 3 THÁNG
         </span>
         <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 font-comic mt-2">
@@ -712,16 +813,24 @@
 
       <!-- Category Filter Tabs -->
       <div class="flex items-center justify-center gap-1.5 flex-wrap mb-6 px-1">
-        <button onclick="filterGallery('all')" class="filter-btn active text-xs font-bold px-3 py-1.5 rounded-full border border-pink-300 bg-white text-slate-700 transition active:scale-95 font-comic" data-filter="all">
+        <button onclick="filterGallery('all')"
+          class="filter-btn active text-xs font-bold px-3 py-1.5 rounded-full border border-pink-300 bg-white text-slate-700 transition active:scale-95 font-comic"
+          data-filter="all">
           🌟 Tất cả (29)
         </button>
-        <button onclick="filterGallery('vungtau')" class="filter-btn text-xs font-bold px-3 py-1.5 rounded-full border border-pink-300 bg-white text-slate-700 transition active:scale-95 font-comic" data-filter="vungtau">
+        <button onclick="filterGallery('vungtau')"
+          class="filter-btn text-xs font-bold px-3 py-1.5 rounded-full border border-pink-300 bg-white text-slate-700 transition active:scale-95 font-comic"
+          data-filter="vungtau">
           🛵 Vũng Tàu (11)
         </button>
-        <button onclick="filterGallery('photobooth')" class="filter-btn text-xs font-bold px-3 py-1.5 rounded-full border border-pink-300 bg-white text-slate-700 transition active:scale-95 font-comic" data-filter="photobooth">
+        <button onclick="filterGallery('photobooth')"
+          class="filter-btn text-xs font-bold px-3 py-1.5 rounded-full border border-pink-300 bg-white text-slate-700 transition active:scale-95 font-comic"
+          data-filter="photobooth">
           📸 Photobooth (11)
         </button>
-        <button onclick="filterGallery('daily')" class="filter-btn text-xs font-bold px-3 py-1.5 rounded-full border border-pink-300 bg-white text-slate-700 transition active:scale-95 font-comic" data-filter="daily">
+        <button onclick="filterGallery('daily')"
+          class="filter-btn text-xs font-bold px-3 py-1.5 rounded-full border border-pink-300 bg-white text-slate-700 transition active:scale-95 font-comic"
+          data-filter="daily">
           💖 Hẹn hò & Dìm (7)
         </button>
       </div>
@@ -733,10 +842,13 @@
         <div class="gallery-item polaroid-card transform -rotate-1" data-cat="vungtau" onclick="openLightboxByIndex(0)">
           <div class="washi-tape"></div>
           <div class="h-36 rounded-lg overflow-hidden bg-pink-100">
-            <img src="att.4B35W753UbGObBqlD_kluz-Yk-jju76mgTbW5JjuLrw.JPG" alt="Xe máy đêm tỏ tình" class="w-full h-full object-cover" loading="lazy">
+            <img src="att.4B35W753UbGObBqlD_kluz-Yk-jju76mgTbW5JjuLrw.JPG" alt="Xe máy đêm tỏ tình"
+              class="w-full h-full object-cover" loading="lazy">
           </div>
-          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Đêm xe máy tỏ tình 🛵💨</p>
-          <span class="text-[8px] font-semibold text-rose-500 block text-center uppercase tracking-wider">Đêm định mệnh</span>
+          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Đêm xe máy tỏ tình 🛵💨
+          </p>
+          <span class="text-[8px] font-semibold text-rose-500 block text-center uppercase tracking-wider">Đêm định
+            mệnh</span>
         </div>
 
         <!-- 2. VŨNG TÀU: Nanh xinh lung linh dạo phố đêm -->
@@ -746,17 +858,21 @@
             <img src="IMG_9812.JPG" alt="Nàng thơ Vũng Tàu" class="w-full h-full object-cover" loading="lazy">
           </div>
           <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Nàng thơ Vũng Tàu ✨</p>
-          <span class="text-[8px] font-semibold text-rose-500 block text-center uppercase tracking-wider">Nanh cưng xỉu</span>
+          <span class="text-[8px] font-semibold text-rose-500 block text-center uppercase tracking-wider">Nanh cưng
+            xỉu</span>
         </div>
 
         <!-- 3. VŨNG TÀU: Nanh selfie An nằm giường -->
         <div class="gallery-item polaroid-card transform rotate-2" data-cat="vungtau" onclick="openLightboxByIndex(2)">
           <div class="washi-tape"></div>
           <div class="h-36 rounded-lg overflow-hidden bg-pink-100">
-            <img src="att.vM2CgexBs3GZe9mWQOJGH8LEOdwJSRAV_e6jAYw0Fxc.JPG" alt="Nanh selfie khách sạn" class="w-full h-full object-cover" loading="lazy">
+            <img src="att.vM2CgexBs3GZe9mWQOJGH8LEOdwJSRAV_e6jAYw0Fxc.JPG" alt="Nanh selfie khách sạn"
+              class="w-full h-full object-cover" loading="lazy">
           </div>
-          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Em chụp, anh làm nền kkk 📸</p>
-          <span class="text-[8px] font-semibold text-rose-500 block text-center uppercase tracking-wider">Khách sạn Vũng Tàu</span>
+          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Em chụp, anh làm nền kkk
+            📸</p>
+          <span class="text-[8px] font-semibold text-rose-500 block text-center uppercase tracking-wider">Khách sạn Vũng
+            Tàu</span>
         </div>
 
         <!-- 4. VŨNG TÀU: Cặp đôi mỏ vịt 1 -->
@@ -765,8 +881,10 @@
           <div class="h-36 rounded-lg overflow-hidden bg-pink-100">
             <img src="IMG_9565.jpg" alt="Mỏ vịt part 1" class="w-full h-full object-cover" loading="lazy">
           </div>
-          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Cặp đôi mỏ vịt part 1 🦆</p>
-          <span class="text-[8px] font-semibold text-rose-500 block text-center uppercase tracking-wider">Nhí nhố cùng nhau</span>
+          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Cặp đôi mỏ vịt part 1 🦆
+          </p>
+          <span class="text-[8px] font-semibold text-rose-500 block text-center uppercase tracking-wider">Nhí nhố cùng
+            nhau</span>
         </div>
 
         <!-- 5. VŨNG TÀU: Cặp đôi mỏ vịt 2 -->
@@ -775,48 +893,61 @@
           <div class="h-36 rounded-lg overflow-hidden bg-pink-100">
             <img src="IMG_9566.jpg" alt="Mỏ vịt part 2" class="w-full h-full object-cover" loading="lazy">
           </div>
-          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Cặp đôi mỏ vịt part 2 🦆</p>
-          <span class="text-[8px] font-semibold text-rose-500 block text-center uppercase tracking-wider">Cưng không chịu nổi</span>
+          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Cặp đôi mỏ vịt part 2 🦆
+          </p>
+          <span class="text-[8px] font-semibold text-rose-500 block text-center uppercase tracking-wider">Cưng không
+            chịu nổi</span>
         </div>
 
         <!-- 6. VŨNG TÀU: Nanh chống cằm dịu dàng -->
         <div class="gallery-item polaroid-card transform -rotate-1" data-cat="vungtau" onclick="openLightboxByIndex(5)">
           <div class="washi-tape"></div>
           <div class="h-36 rounded-lg overflow-hidden bg-pink-100">
-            <img src="att.mi8_OPmUbNGKa9O-pQnRAoV1C9WYghvxP9DulJhOSiI.JPG" alt="Nanh chống cằm" class="w-full h-full object-cover" loading="lazy">
+            <img src="att.mi8_OPmUbNGKa9O-pQnRAoV1C9WYghvxP9DulJhOSiI.JPG" alt="Nanh chống cằm"
+              class="w-full h-full object-cover" loading="lazy">
           </div>
-          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Góc nghiêng dịu dàng 💕</p>
-          <span class="text-[8px] font-semibold text-rose-500 block text-center uppercase tracking-wider">Say đắm ánh mắt ấy</span>
+          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Góc nghiêng dịu dàng 💕
+          </p>
+          <span class="text-[8px] font-semibold text-rose-500 block text-center uppercase tracking-wider">Say đắm ánh
+            mắt ấy</span>
         </div>
 
         <!-- 7. VŨNG TÀU: Nanh má bánh bao chu môi -->
         <div class="gallery-item polaroid-card transform rotate-2" data-cat="vungtau" onclick="openLightboxByIndex(6)">
           <div class="washi-tape"></div>
           <div class="h-36 rounded-lg overflow-hidden bg-pink-100">
-            <img src="att.ncvXeJW8spjINe2V_I_HIJR29l-07BnWqzIiCEyaUkc.JPG" alt="Nanh má bánh bao" class="w-full h-full object-cover" loading="lazy">
+            <img src="att.ncvXeJW8spjINe2V_I_HIJR29l-07BnWqzIiCEyaUkc.JPG" alt="Nanh má bánh bao"
+              class="w-full h-full object-cover" loading="lazy">
           </div>
-          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Má bánh bao muốn cắn 🥐</p>
-          <span class="text-[8px] font-semibold text-rose-500 block text-center uppercase tracking-wider">Chu môi siêu đáng yêu</span>
+          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Má bánh bao muốn cắn 🥐
+          </p>
+          <span class="text-[8px] font-semibold text-rose-500 block text-center uppercase tracking-wider">Chu môi siêu
+            đáng yêu</span>
         </div>
 
         <!-- 8. VŨNG TÀU: Nanh giơ tay lên đầu tạo dáng -->
         <div class="gallery-item polaroid-card transform -rotate-2" data-cat="vungtau" onclick="openLightboxByIndex(7)">
           <div class="washi-tape"></div>
           <div class="h-36 rounded-lg overflow-hidden bg-pink-100">
-            <img src="att.OSRwvkP2lZKctLq506mAI3oDL-QEpSxpmHhpOVC68x8.JPG" alt="Nanh tạo dáng" class="w-full h-full object-cover" loading="lazy">
+            <img src="att.OSRwvkP2lZKctLq506mAI3oDL-QEpSxpmHhpOVC68x8.JPG" alt="Nanh tạo dáng"
+              class="w-full h-full object-cover" loading="lazy">
           </div>
           <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Tạo dáng nhí nhố ✌️</p>
-          <span class="text-[8px] font-semibold text-rose-500 block text-center uppercase tracking-wider">Năng lượng vui vẻ</span>
+          <span class="text-[8px] font-semibold text-rose-500 block text-center uppercase tracking-wider">Năng lượng vui
+            vẻ</span>
         </div>
 
         <!-- 9. VŨNG TÀU: Nanh selfie gương phòng nghỉ -->
         <div class="gallery-item polaroid-card transform rotate-1" data-cat="vungtau" onclick="openLightboxByIndex(8)">
           <div class="washi-tape"></div>
           <div class="h-36 rounded-lg overflow-hidden bg-pink-100">
-            <img src="att.2RpI_JXivwOSVTg2pYwGTSbxJm6ue8mz7ii9Krd1cno.JPG" alt="Nanh gương" class="w-full h-full object-cover" loading="lazy">
+            <img src="att.2RpI_JXivwOSVTg2pYwGTSbxJm6ue8mz7ii9Krd1cno.JPG" alt="Nanh gương"
+              class="w-full h-full object-cover" loading="lazy">
           </div>
-          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Check-in outfit xinh xắn 🪞</p>
-          <span class="text-[8px] font-semibold text-rose-500 block text-center uppercase tracking-wider">Kỷ niệm khách sạn</span>
+          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Check-in outfit xinh xắn
+            🪞</p>
+          <span class="text-[8px] font-semibold text-rose-500 block text-center uppercase tracking-wider">Kỷ niệm khách
+            sạn</span>
         </div>
 
         <!-- 10. VŨNG TÀU: An selfie ngơ ngác -->
@@ -825,8 +956,10 @@
           <div class="h-36 rounded-lg overflow-hidden bg-pink-100">
             <img src="IMG_9809.jpg" alt="An ngơ ngác" class="w-full h-full object-cover" loading="lazy">
           </div>
-          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Kẻ say tình ngơ ngác 🤡</p>
-          <span class="text-[8px] font-semibold text-rose-500 block text-center uppercase tracking-wider">Gương mặt hạnh phúc</span>
+          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Kẻ say tình ngơ ngác 🤡
+          </p>
+          <span class="text-[8px] font-semibold text-rose-500 block text-center uppercase tracking-wider">Gương mặt hạnh
+            phúc</span>
         </div>
 
         <!-- 11. VŨNG TÀU: Gương homestay lưu niệm -->
@@ -836,127 +969,161 @@
             <img src="IMG_9837.jpg" alt="Gương kỷ niệm" class="w-full h-full object-cover" loading="lazy">
           </div>
           <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Góc nhỏ kỷ niệm 🏨</p>
-          <span class="text-[8px] font-semibold text-rose-500 block text-center uppercase tracking-wider">Kỷ niệm bên nhau</span>
+          <span class="text-[8px] font-semibold text-rose-500 block text-center uppercase tracking-wider">Kỷ niệm bên
+            nhau</span>
         </div>
 
         <!-- 12. PHOTOBOOTH 1: Tai heo & Cá mập xanh 1 -->
-        <div class="gallery-item polaroid-card transform -rotate-2" data-cat="photobooth" onclick="openLightboxByIndex(11)">
+        <div class="gallery-item polaroid-card transform -rotate-2" data-cat="photobooth"
+          onclick="openLightboxByIndex(11)">
           <div class="washi-tape"></div>
           <div class="h-36 rounded-lg overflow-hidden bg-pink-100">
             <img src="IMG_0278.JPG" alt="Tai heo & Cá mập" class="w-full h-full object-cover" loading="lazy">
           </div>
-          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Tai heo & Cá mập xanh 🐷🦈</p>
-          <span class="text-[8px] font-semibold text-pink-500 block text-center uppercase tracking-wider">Studio Hồng</span>
+          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Tai heo & Cá mập xanh
+            🐷🦈</p>
+          <span class="text-[8px] font-semibold text-pink-500 block text-center uppercase tracking-wider">Studio
+            Hồng</span>
         </div>
 
         <!-- 13. PHOTOBOOTH 1: Ôm má cười tươi -->
-        <div class="gallery-item polaroid-card transform rotate-1" data-cat="photobooth" onclick="openLightboxByIndex(12)">
+        <div class="gallery-item polaroid-card transform rotate-1" data-cat="photobooth"
+          onclick="openLightboxByIndex(12)">
           <div class="washi-tape"></div>
           <div class="h-36 rounded-lg overflow-hidden bg-pink-100">
             <img src="IMG_0279.JPG" alt="Nụ cười rực rỡ" class="w-full h-full object-cover" loading="lazy">
           </div>
-          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Nụ cười rạng rỡ nhất 🥰</p>
-          <span class="text-[8px] font-semibold text-pink-500 block text-center uppercase tracking-wider">Studio Hồng</span>
+          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Nụ cười rạng rỡ nhất 🥰
+          </p>
+          <span class="text-[8px] font-semibold text-pink-500 block text-center uppercase tracking-wider">Studio
+            Hồng</span>
         </div>
 
         <!-- 14. PHOTOBOOTH 1: Ghép đôi trái tim -->
-        <div class="gallery-item polaroid-card transform -rotate-1" data-cat="photobooth" onclick="openLightboxByIndex(13)">
+        <div class="gallery-item polaroid-card transform -rotate-1" data-cat="photobooth"
+          onclick="openLightboxByIndex(13)">
           <div class="washi-tape"></div>
           <div class="h-36 rounded-lg overflow-hidden bg-pink-100">
             <img src="IMG_0283.JPG" alt="Ghép đôi trái tim" class="w-full h-full object-cover" loading="lazy">
           </div>
           <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Ghép đôi trái tim 💕</p>
-          <span class="text-[8px] font-semibold text-pink-500 block text-center uppercase tracking-wider">Studio Hồng</span>
+          <span class="text-[8px] font-semibold text-pink-500 block text-center uppercase tracking-wider">Studio
+            Hồng</span>
         </div>
 
         <!-- 15. PHOTOBOOTH 1: Cười tít mắt -->
-        <div class="gallery-item polaroid-card transform rotate-2" data-cat="photobooth" onclick="openLightboxByIndex(14)">
+        <div class="gallery-item polaroid-card transform rotate-2" data-cat="photobooth"
+          onclick="openLightboxByIndex(14)">
           <div class="washi-tape"></div>
           <div class="h-36 rounded-lg overflow-hidden bg-pink-100">
             <img src="IMG_0285.JPG" alt="Cười tít mắt" class="w-full h-full object-cover" loading="lazy">
           </div>
-          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Cười tít mắt siêu ngọt 🌸</p>
-          <span class="text-[8px] font-semibold text-pink-500 block text-center uppercase tracking-wider">Studio Hồng</span>
+          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Cười tít mắt siêu ngọt 🌸
+          </p>
+          <span class="text-[8px] font-semibold text-pink-500 block text-center uppercase tracking-wider">Studio
+            Hồng</span>
         </div>
 
         <!-- 16. PHOTOBOOTH 1: Nanh solo kẹp sao hồng -->
-        <div class="gallery-item polaroid-card transform -rotate-2" data-cat="photobooth" onclick="openLightboxByIndex(15)">
+        <div class="gallery-item polaroid-card transform -rotate-2" data-cat="photobooth"
+          onclick="openLightboxByIndex(15)">
           <div class="washi-tape"></div>
           <div class="h-36 rounded-lg overflow-hidden bg-pink-100">
-            <img src="att.ENpD5wsTP45a8HfjhrXXgjG17vuPExOKnwYGuOVZhO8.JPG" alt="Nanh solo photobooth" class="w-full h-full object-cover" loading="lazy">
+            <img src="att.ENpD5wsTP45a8HfjhrXXgjG17vuPExOKnwYGuOVZhO8.JPG" alt="Nanh solo photobooth"
+              class="w-full h-full object-cover" loading="lazy">
           </div>
-          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Nanh kẹp tóc ngôi sao ⭐</p>
-          <span class="text-[8px] font-semibold text-pink-500 block text-center uppercase tracking-wider">Studio Hồng</span>
+          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Nanh kẹp tóc ngôi sao ⭐
+          </p>
+          <span class="text-[8px] font-semibold text-pink-500 block text-center uppercase tracking-wider">Studio
+            Hồng</span>
         </div>
 
         <!-- 17. PHOTOBOOTH 2: Mèo nơ hồng & Gà con vàng -->
-        <div class="gallery-item polaroid-card transform rotate-1" data-cat="photobooth" onclick="openLightboxByIndex(16)">
+        <div class="gallery-item polaroid-card transform rotate-1" data-cat="photobooth"
+          onclick="openLightboxByIndex(16)">
           <div class="washi-tape"></div>
           <div class="h-36 rounded-lg overflow-hidden bg-slate-900">
             <img src="IMG_0385.JPG" alt="Mèo con & Gà con" class="w-full h-full object-cover" loading="lazy">
           </div>
-          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Mèo nơ hồng & Gà con 🐱🐥</p>
-          <span class="text-[8px] font-semibold text-purple-600 block text-center uppercase tracking-wider">Studio Ngàn Sao</span>
+          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Mèo nơ hồng & Gà con 🐱🐥
+          </p>
+          <span class="text-[8px] font-semibold text-purple-600 block text-center uppercase tracking-wider">Studio Ngàn
+            Sao</span>
         </div>
 
         <!-- 18. PHOTOBOOTH 2: Dáng ngầu -->
-        <div class="gallery-item polaroid-card transform -rotate-1" data-cat="photobooth" onclick="openLightboxByIndex(17)">
+        <div class="gallery-item polaroid-card transform -rotate-1" data-cat="photobooth"
+          onclick="openLightboxByIndex(17)">
           <div class="washi-tape"></div>
           <div class="h-36 rounded-lg overflow-hidden bg-slate-900">
             <img src="IMG_0386.JPG" alt="Dáng ngầu" class="w-full h-full object-cover" loading="lazy">
           </div>
           <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Tạo dáng cực ngầu 😎</p>
-          <span class="text-[8px] font-semibold text-purple-600 block text-center uppercase tracking-wider">Studio Ngàn Sao</span>
+          <span class="text-[8px] font-semibold text-purple-600 block text-center uppercase tracking-wider">Studio Ngàn
+            Sao</span>
         </div>
 
         <!-- 19. PHOTOBOOTH 2: Cười thả ga -->
-        <div class="gallery-item polaroid-card transform rotate-2" data-cat="photobooth" onclick="openLightboxByIndex(18)">
+        <div class="gallery-item polaroid-card transform rotate-2" data-cat="photobooth"
+          onclick="openLightboxByIndex(18)">
           <div class="washi-tape"></div>
           <div class="h-36 rounded-lg overflow-hidden bg-slate-900">
             <img src="IMG_0390.JPG" alt="Cười thả ga" class="w-full h-full object-cover" loading="lazy">
           </div>
-          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Cười thả ga quên lối 🌟</p>
-          <span class="text-[8px] font-semibold text-purple-600 block text-center uppercase tracking-wider">Studio Ngàn Sao</span>
+          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Cười thả ga quên lối 🌟
+          </p>
+          <span class="text-[8px] font-semibold text-purple-600 block text-center uppercase tracking-wider">Studio Ngàn
+            Sao</span>
         </div>
 
         <!-- 20. PHOTOBOOTH 2: Ánh mắt nhìn nhau -->
-        <div class="gallery-item polaroid-card transform -rotate-2" data-cat="photobooth" onclick="openLightboxByIndex(19)">
+        <div class="gallery-item polaroid-card transform -rotate-2" data-cat="photobooth"
+          onclick="openLightboxByIndex(19)">
           <div class="washi-tape"></div>
           <div class="h-36 rounded-lg overflow-hidden bg-slate-900">
             <img src="IMG_0391.jpg" alt="Ánh mắt nhìn nhau" class="w-full h-full object-cover" loading="lazy">
           </div>
-          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Ánh mắt lấp lánh nhìn nhau 💫</p>
-          <span class="text-[8px] font-semibold text-purple-600 block text-center uppercase tracking-wider">Studio Ngàn Sao</span>
+          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Ánh mắt lấp lánh nhìn
+            nhau 💫</p>
+          <span class="text-[8px] font-semibold text-purple-600 block text-center uppercase tracking-wider">Studio Ngàn
+            Sao</span>
         </div>
 
         <!-- 21. PHOTOBOOTH 2: Tung chiêu biểu cảm -->
-        <div class="gallery-item polaroid-card transform rotate-1" data-cat="photobooth" onclick="openLightboxByIndex(20)">
+        <div class="gallery-item polaroid-card transform rotate-1" data-cat="photobooth"
+          onclick="openLightboxByIndex(20)">
           <div class="washi-tape"></div>
           <div class="h-36 rounded-lg overflow-hidden bg-slate-900">
             <img src="IMG_0392.JPG" alt="Tung chiêu độc lạ" class="w-full h-full object-cover" loading="lazy">
           </div>
           <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Tung chiêu độc lạ 🤪</p>
-          <span class="text-[8px] font-semibold text-purple-600 block text-center uppercase tracking-wider">Studio Ngàn Sao</span>
+          <span class="text-[8px] font-semibold text-purple-600 block text-center uppercase tracking-wider">Studio Ngàn
+            Sao</span>
         </div>
 
         <!-- 22. PHOTOBOOTH 2: Đáng yêu khó đỡ -->
-        <div class="gallery-item polaroid-card transform -rotate-1" data-cat="photobooth" onclick="openLightboxByIndex(21)">
+        <div class="gallery-item polaroid-card transform -rotate-1" data-cat="photobooth"
+          onclick="openLightboxByIndex(21)">
           <div class="washi-tape"></div>
           <div class="h-36 rounded-lg overflow-hidden bg-slate-900">
             <img src="IMG_0393.JPG" alt="Đáng yêu khó đỡ" class="w-full h-full object-cover" loading="lazy">
           </div>
           <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Đáng yêu khó đỡ 💖</p>
-          <span class="text-[8px] font-semibold text-purple-600 block text-center uppercase tracking-wider">Studio Ngàn Sao</span>
+          <span class="text-[8px] font-semibold text-purple-600 block text-center uppercase tracking-wider">Studio Ngàn
+            Sao</span>
         </div>
 
         <!-- 23. DAILY: Nanh ôm bó hoa pastel khổng lồ -->
         <div class="gallery-item polaroid-card transform rotate-2" data-cat="daily" onclick="openLightboxByIndex(22)">
           <div class="washi-tape"></div>
           <div class="h-36 rounded-lg overflow-hidden bg-pink-100">
-            <img src="att.KddoKIRfZsVYnUbKl8AxrdFua63ttn2ze9bDhz7m6xA.JPG" alt="Nanh ôm bó hoa" class="w-full h-full object-cover" loading="lazy">
+            <img src="att.KddoKIRfZsVYnUbKl8AxrdFua63ttn2ze9bDhz7m6xA.JPG" alt="Nanh ôm bó hoa"
+              class="w-full h-full object-cover" loading="lazy">
           </div>
-          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Bó hoa tặng em bé chu môi 💐</p>
-          <span class="text-[8px] font-semibold text-emerald-600 block text-center uppercase tracking-wider">Ngọt ngào lãng mạn</span>
+          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Bó hoa tặng em bé chu môi
+            💐</p>
+          <span class="text-[8px] font-semibold text-emerald-600 block text-center uppercase tracking-wider">Ngọt ngào
+            lãng mạn</span>
         </div>
 
         <!-- 24. DAILY: Dạo phố đêm cầm đèn phát sáng -->
@@ -965,18 +1132,23 @@
           <div class="h-36 rounded-lg overflow-hidden bg-pink-100">
             <img src="IMG_0245.jpg" alt="Dạo phố đèn pha lê" class="w-full h-full object-cover" loading="lazy">
           </div>
-          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Dạo phố đêm đèn pha lê 🔮</p>
-          <span class="text-[8px] font-semibold text-emerald-600 block text-center uppercase tracking-wider">Đêm Sài Gòn</span>
+          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Dạo phố đêm đèn pha lê 🔮
+          </p>
+          <span class="text-[8px] font-semibold text-emerald-600 block text-center uppercase tracking-wider">Đêm Sài
+            Gòn</span>
         </div>
 
         <!-- 25. DAILY: Chuyến xe dán sao trên trán -->
         <div class="gallery-item polaroid-card transform rotate-1" data-cat="daily" onclick="openLightboxByIndex(24)">
           <div class="washi-tape"></div>
           <div class="h-36 rounded-lg overflow-hidden bg-pink-100">
-            <img src="att.WJJVp0zrYL7D0gRVm6Op1vptfnAhPRIZaRJEozCdj1s.JPG" alt="Chuyến xe dán sao" class="w-full h-full object-cover" loading="lazy">
+            <img src="att.WJJVp0zrYL7D0gRVm6Op1vptfnAhPRIZaRJEozCdj1s.JPG" alt="Chuyến xe dán sao"
+              class="w-full h-full object-cover" loading="lazy">
           </div>
-          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Dán sao trên trán đi vi vu 🚌⭐</p>
-          <span class="text-[8px] font-semibold text-emerald-600 block text-center uppercase tracking-wider">Chuyến xe đi chơi</span>
+          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Dán sao trên trán đi vi
+            vu 🚌⭐</p>
+          <span class="text-[8px] font-semibold text-emerald-600 block text-center uppercase tracking-wider">Chuyến xe
+            đi chơi</span>
         </div>
 
         <!-- 26. DAILY: Sáng sớm bình yên bên nhau -->
@@ -985,38 +1157,49 @@
           <div class="h-36 rounded-lg overflow-hidden bg-pink-100">
             <img src="IMG_9752.jpg" alt="Sáng sớm thức giấc" class="w-full h-full object-cover" loading="lazy">
           </div>
-          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Bình yên thức giấc bên em ☀️</p>
-          <span class="text-[8px] font-semibold text-emerald-600 block text-center uppercase tracking-wider">Mỗi sớm mai</span>
+          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Bình yên thức giấc bên em
+            ☀️</p>
+          <span class="text-[8px] font-semibold text-emerald-600 block text-center uppercase tracking-wider">Mỗi sớm
+            mai</span>
         </div>
 
         <!-- 27. DAILY / DÌM: Nanh cằm nọng kính cận màn hình rọi -->
         <div class="gallery-item polaroid-card transform rotate-2" data-cat="daily" onclick="openLightboxByIndex(26)">
           <div class="washi-tape"></div>
           <div class="h-36 rounded-lg overflow-hidden bg-pink-100">
-            <img src="att.RuQvDlcplUAgZbV9Tj16QDBJ7eRwgqJeepyjG7K0FEM.JPG" alt="Nanh cằm nọng kính cận" class="w-full h-full object-cover" loading="lazy">
+            <img src="att.RuQvDlcplUAgZbV9Tj16QDBJ7eRwgqJeepyjG7K0FEM.JPG" alt="Nanh cằm nọng kính cận"
+              class="w-full h-full object-cover" loading="lazy">
           </div>
-          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Góc dìm cằm nọng vô giá kkk 😂</p>
-          <span class="text-[8px] font-semibold text-amber-600 block text-center uppercase tracking-wider">Dìm nhưng mà yêu</span>
+          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Góc dìm cằm nọng vô giá
+            kkk 😂</p>
+          <span class="text-[8px] font-semibold text-amber-600 block text-center uppercase tracking-wider">Dìm nhưng mà
+            yêu</span>
         </div>
 
         <!-- 28. DAILY / DÌM: An mắt nhắm tịt quán ăn cờ đỏ -->
         <div class="gallery-item polaroid-card transform -rotate-2" data-cat="daily" onclick="openLightboxByIndex(27)">
           <div class="washi-tape"></div>
           <div class="h-36 rounded-lg overflow-hidden bg-pink-100">
-            <img src="att.pvOv3yxr21uBYQYt3u5Ag4dOGfl1gMd5UnM0xLsA460.JPG" alt="An nhắm tịt mắt" class="w-full h-full object-cover" loading="lazy">
+            <img src="att.pvOv3yxr21uBYQYt3u5Ag4dOGfl1gMd5UnM0xLsA460.JPG" alt="An nhắm tịt mắt"
+              class="w-full h-full object-cover" loading="lazy">
           </div>
-          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">An đói lả nhắm tịt mắt 🍜</p>
-          <span class="text-[8px] font-semibold text-amber-600 block text-center uppercase tracking-wider">Góc dìm An Phan</span>
+          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">An đói lả nhắm tịt mắt 🍜
+          </p>
+          <span class="text-[8px] font-semibold text-amber-600 block text-center uppercase tracking-wider">Góc dìm An
+            Phan</span>
         </div>
 
         <!-- 29. DAILY: Nanh ngủ chu môi hờn dỗi -->
         <div class="gallery-item polaroid-card transform rotate-1" data-cat="daily" onclick="openLightboxByIndex(28)">
           <div class="washi-tape"></div>
           <div class="h-36 rounded-lg overflow-hidden bg-pink-100">
-            <img src="att.vJ7mnLYjIJc9ikIh0kHbUZaz6XvbqDmwesXvke2fMhA.JPG" alt="Nanh ngủ chu môi" class="w-full h-full object-cover" loading="lazy">
+            <img src="att.vJ7mnLYjIJc9ikIh0kHbUZaz6XvbqDmwesXvke2fMhA.JPG" alt="Nanh ngủ chu môi"
+              class="w-full h-full object-cover" loading="lazy">
           </div>
-          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Em bé hờn dỗi chuẩn bị ngủ 😴</p>
-          <span class="text-[8px] font-semibold text-emerald-600 block text-center uppercase tracking-wider">Đêm muộn</span>
+          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Em bé hờn dỗi chuẩn bị
+            ngủ 😴</p>
+          <span class="text-[8px] font-semibold text-emerald-600 block text-center uppercase tracking-wider">Đêm
+            muộn</span>
         </div>
 
       </div>
@@ -1028,8 +1211,9 @@
     <!-- ========================================================================= -->
     <section class="mt-12 px-4 pb-8 text-center">
 
-      <div class="webtoon-panel p-6 bg-gradient-to-b from-pink-50 via-rose-50 to-amber-50 border-4 border-deepLove shadow-2xl relative overflow-hidden">
-        
+      <div
+        class="webtoon-panel p-6 bg-gradient-to-b from-pink-50 via-rose-50 to-amber-50 border-4 border-deepLove shadow-2xl relative overflow-hidden">
+
         <div id="confettiTrigger" class="h-1 w-full"></div>
 
         <div class="text-5xl mb-2 animate-bounce">
@@ -1039,24 +1223,29 @@
         <h3 class="text-2xl sm:text-3xl font-extrabold text-deepLove font-comic tracking-tight leading-snug">
           HAPPY 3 MONTHS & 20/10!
         </h3>
-        
+
         <p class="text-base sm:text-lg font-bold text-rose-600 font-hand mt-1">
           Thương Nanh nhiều lắmmm ❤️
         </p>
 
-        <div class="mt-4 p-4 bg-white/95 rounded-2xl border border-pink-200 text-xs sm:text-sm text-pink-900 leading-relaxed font-medium shadow-inner">
+        <div
+          class="mt-4 p-4 bg-white/95 rounded-2xl border border-pink-200 text-xs sm:text-sm text-pink-900 leading-relaxed font-medium shadow-inner">
           <p>
-            Cảm ơn em vì đã là một phần đặc biệt nhất trong cuộc sống của anh suốt 3 tháng qua. Nhân ngày 20/10, anh chúc em bé của anh luôn luôn xinh đẹp, rạng rỡ, bình an và mãi nở nụ cười hạnh phúc bên cạnh anh nhé! Yêu em nhiều lắmmm! 💕
+            Cảm ơn em vì đã là một phần đặc biệt nhất trong cuộc sống của anh suốt 3 tháng qua. Nhân ngày 20/10, anh
+            chúc em bé của anh luôn luôn xinh đẹp, rạng rỡ, bình an và mãi nở nụ cười hạnh phúc bên cạnh anh nhé! Yêu em
+            nhiều lắmmm! 💕
           </p>
         </div>
 
         <!-- Nút Tương Tác: Gửi Ngàn Nụ Hôn Đến Nanh -->
         <div class="mt-6 space-y-3">
-          <button onclick="sendKissesToNanh(event)" class="w-full py-4 bg-gradient-to-r from-pink-500 via-rose-500 to-deepLove text-white font-extrabold rounded-full shadow-lg hover:shadow-pink-300 active:scale-95 transition-all text-sm sm:text-base font-comic flex items-center justify-center gap-2">
+          <button onclick="sendKissesToNanh(event)"
+            class="w-full py-4 bg-gradient-to-r from-pink-500 via-rose-500 to-deepLove text-white font-extrabold rounded-full shadow-lg hover:shadow-pink-300 active:scale-95 transition-all text-sm sm:text-base font-comic flex items-center justify-center gap-2">
             <span>💖 Gửi ngàn nụ hôn đến Nanh 💋</span>
           </button>
 
-          <a href="#chuong1" class="inline-block text-xs font-bold text-pink-500 hover:text-deepLove font-comic underline pt-2">
+          <a href="#chuong1"
+            class="inline-block text-xs font-bold text-pink-500 hover:text-deepLove font-comic underline pt-2">
             ↑ Đọc lại từ đầu
           </a>
         </div>
@@ -1076,30 +1265,39 @@
   <!-- ========================================================================= -->
   <!-- LIGHTBOX MODAL NÂNG CẤP (NEXT/PREV, COUNTER, SWIPE & REACT HEART)        -->
   <!-- ========================================================================= -->
-  <div id="lightboxModal" class="hidden fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex flex-col items-center justify-center p-3 transition-all duration-300" onclick="handleLightboxBackdrop(event)">
-    <div class="relative max-w-sm w-full bg-white rounded-3xl p-3 shadow-2xl overflow-hidden" onclick="event.stopPropagation()">
-      
+  <div id="lightboxModal"
+    class="hidden fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex flex-col items-center justify-center p-3 transition-all duration-300"
+    onclick="handleLightboxBackdrop(event)">
+    <div class="relative max-w-sm w-full bg-white rounded-3xl p-3 shadow-2xl overflow-hidden"
+      onclick="event.stopPropagation()">
+
       <!-- Top Action Bar -->
       <div class="flex items-center justify-between pb-2 px-1 border-b border-pink-100 mb-2">
-        <span id="lightboxCounter" class="text-[11px] font-bold text-deepLove bg-pink-100 px-2.5 py-0.5 rounded-full font-comic">
+        <span id="lightboxCounter"
+          class="text-[11px] font-bold text-deepLove bg-pink-100 px-2.5 py-0.5 rounded-full font-comic">
           1 / 29
         </span>
-        <button onclick="closeLightbox()" class="w-7 h-7 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center text-xs font-bold active:scale-90 shadow">
+        <button onclick="closeLightbox()"
+          class="w-7 h-7 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center text-xs font-bold active:scale-90 shadow">
           ✕
         </button>
       </div>
 
       <!-- Full-Size Image Container with Navigation Arrows -->
-      <div class="relative w-full max-h-[62vh] rounded-2xl overflow-hidden bg-slate-950 flex items-center justify-center group">
-        <img id="lightboxImg" src="" alt="Full View" class="w-full h-auto max-h-[62vh] object-contain transition-transform duration-200">
-        
+      <div
+        class="relative w-full max-h-[62vh] rounded-2xl overflow-hidden bg-slate-950 flex items-center justify-center group">
+        <img id="lightboxImg" src="" alt="Full View"
+          class="w-full h-auto max-h-[62vh] object-contain transition-transform duration-200">
+
         <!-- Prev Button -->
-        <button onclick="navLightbox(-1)" class="absolute left-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/50 text-white flex items-center justify-center text-sm font-bold active:scale-90 hover:bg-black/70 backdrop-blur-sm shadow z-10">
+        <button onclick="navLightbox(-1)"
+          class="absolute left-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/50 text-white flex items-center justify-center text-sm font-bold active:scale-90 hover:bg-black/70 backdrop-blur-sm shadow z-10">
           ❮
         </button>
 
         <!-- Next Button -->
-        <button onclick="navLightbox(1)" class="absolute right-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/50 text-white flex items-center justify-center text-sm font-bold active:scale-90 hover:bg-black/70 backdrop-blur-sm shadow z-10">
+        <button onclick="navLightbox(1)"
+          class="absolute right-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/50 text-white flex items-center justify-center text-sm font-bold active:scale-90 hover:bg-black/70 backdrop-blur-sm shadow z-10">
           ❯
         </button>
       </div>
@@ -1110,8 +1308,9 @@
           <p id="lightboxCaption" class="text-xs font-bold text-slate-800 font-comic truncate"></p>
           <span id="lightboxCategory" class="text-[10px] text-pink-600 font-semibold block"></span>
         </div>
-        
-        <button onclick="reactHeartLightbox(event)" class="flex items-center gap-1 bg-pink-50 text-deepLove px-3 py-1.5 rounded-full border border-pink-200 text-xs font-bold active:scale-90 transition flex-shrink-0 shadow-sm">
+
+        <button onclick="reactHeartLightbox(event)"
+          class="flex items-center gap-1 bg-pink-50 text-deepLove px-3 py-1.5 rounded-full border border-pink-200 text-xs font-bold active:scale-90 transition flex-shrink-0 shadow-sm">
           <span>💖</span>
           <span id="lightboxHeartCount">99+</span>
         </button>
@@ -1428,4 +1627,5 @@
     }
   </script>
 </body>
+
 </html>
