@@ -1,0 +1,1396 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Chuyện Của An & Nanh • Kỷ Niệm 3 Tháng & 20/10</title>
+  
+  <!-- SEO & Social Meta -->
+  <meta name="description" content="Webtoon kỷ niệm 3 tháng tình yêu của An & Nanh - Món quà ngọt ngào, hài hước và lãng mạn nhân dịp 20/10">
+  <meta property="og:title" content="Chuyện Của An & Nanh • 3 Tháng Yêu Nhau">
+  <meta property="og:description" content="Chuyện tình ngọt ngào từ những đêm đợi rep, tiếng hét 'Gì vậy cha nộiii' đến cái gật đầu trên xe máy Vũng Tàu.">
+  <meta name="theme-color" content="#ff758f">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            peachCream: '#fff3ea',
+            softPink: '#ffe5ec',
+            warmRose: '#ffb3c1',
+            vibrantPink: '#ff758f',
+            deepLove: '#c9184a',
+            comicNavy: '#1a1c2e',
+            mintPastel: '#e8f5e9',
+            amberLight: '#fff8e7',
+          },
+          fontFamily: {
+            comic: ['"Mali"', '"Nunito"', 'sans-serif'],
+            hand: ['"Patrick Hand"', 'cursive'],
+            body: ['"Quicksand"', 'sans-serif'],
+          },
+          boxShadow: {
+            'comic': '4px 4px 0px 0px rgba(201, 24, 74, 0.9)',
+            'comic-lg': '6px 6px 0px 0px rgba(26, 28, 46, 0.9)',
+            'comic-sm': '2px 2px 0px 0px rgba(201, 24, 74, 0.8)',
+            'soft-glow': '0 0 20px rgba(255, 117, 143, 0.45)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts: Mali, Patrick Hand, Quicksand -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Patrick+Hand&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Canvas Confetti Library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+  <style>
+    /* Custom Scrollbar Styles */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #ffe5ec;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #ff758f;
+      border-radius: 9999px;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(180deg, #fff3ea 0%, #ffe5ec 25%, #fff0f3 50%, #ffe5ec 75%, #fff3ea 100%);
+      color: #2b2b2b;
+      overflow-x: hidden;
+      touch-action: manipulation;
+    }
+
+    /* Webtoon Frame Panel Aesthetics */
+    .webtoon-panel {
+      border: 3px solid #1a1c2e;
+      border-radius: 22px;
+      background: #ffffff;
+      box-shadow: 5px 5px 0px 0px #1a1c2e;
+      overflow: hidden;
+      transition: all 0.25s ease;
+    }
+    .webtoon-panel:hover {
+      transform: translateY(-2px);
+      box-shadow: 7px 7px 0px 0px #1a1c2e;
+    }
+
+    /* Speech Bubbles */
+    .speech-bubble {
+      position: relative;
+      background: #ffffff;
+      border: 2.5px solid #1a1c2e;
+      border-radius: 18px;
+      padding: 10px 14px;
+      font-family: 'Mali', cursive;
+      font-weight: 600;
+      box-shadow: 3px 3px 0px 0px rgba(26, 28, 46, 0.8);
+    }
+    .speech-bubble.tail-bottom::after {
+      content: '';
+      position: absolute;
+      bottom: -11px;
+      left: 28px;
+      border-width: 11px 11px 0 0;
+      border-style: solid;
+      border-color: #1a1c2e transparent;
+      display: block;
+      width: 0;
+    }
+    .speech-bubble.tail-bottom::before {
+      content: '';
+      position: absolute;
+      bottom: -7px;
+      left: 30px;
+      border-width: 8px 8px 0 0;
+      border-style: solid;
+      border-color: #ffffff transparent;
+      display: block;
+      width: 0;
+      z-index: 1;
+    }
+
+    /* Spiky Screaming Bubble */
+    .spiky-bubble {
+      position: relative;
+      background: #fff0f3;
+      border: 3px dashed #c9184a;
+      border-radius: 16px;
+      color: #c9184a;
+      box-shadow: 4px 4px 0px 0px #c9184a;
+      animation: shake 0.6s infinite alternate ease-in-out;
+    }
+    @keyframes shake {
+      0% { transform: rotate(-1deg) scale(0.99); }
+      100% { transform: rotate(1deg) scale(1.01); }
+    }
+
+    /* Sound Effect Text (SFX) */
+    .sfx-text {
+      font-family: 'Patrick Hand', cursive;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-shadow: 1px 1px 0px #ffffff, -1px -1px 0px #ffffff;
+      display: inline-block;
+    }
+
+    /* Floating Tap Hearts */
+    .tap-heart {
+      position: fixed;
+      pointer-events: none;
+      z-index: 9999;
+      animation: floatUpFade 1.2s forwards cubic-bezier(0.18, 0.89, 0.32, 1.28);
+      font-size: 24px;
+      filter: drop-shadow(0 2px 4px rgba(201, 24, 74, 0.3));
+    }
+    @keyframes floatUpFade {
+      0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(0.6) rotate(0deg);
+      }
+      50% {
+        opacity: 0.95;
+        transform: translate(-50%, -100px) scale(1.2) rotate(-15deg);
+      }
+      100% {
+        opacity: 0;
+        transform: translate(-50%, -180px) scale(0.8) rotate(15deg);
+      }
+    }
+
+    /* Floating Background Emojis */
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-12px) rotate(6deg); }
+    }
+    .float-slow {
+      animation: floatSlow 4s ease-in-out infinite;
+    }
+
+    /* Reading Progress Bar */
+    #readProgressBar {
+      transition: width 0.15s ease-out;
+    }
+
+    /* Music Visualizer Bars */
+    .bar {
+      width: 3px;
+      background: #c9184a;
+      border-radius: 9999px;
+      animation: soundWave 0.8s ease-in-out infinite alternate;
+    }
+    .bar:nth-child(1) { height: 7px; animation-delay: 0.1s; }
+    .bar:nth-child(2) { height: 16px; animation-delay: 0.3s; }
+    .bar:nth-child(3) { height: 11px; animation-delay: 0.2s; }
+    .bar:nth-child(4) { height: 18px; animation-delay: 0.4s; }
+    .music-paused .bar {
+      animation-play-state: paused;
+      height: 4px !important;
+    }
+    @keyframes soundWave {
+      0% { height: 4px; }
+      100% { height: 18px; }
+    }
+
+    /* Polaroid Styles */
+    .polaroid-card {
+      background: #ffffff;
+      padding: 8px 8px 12px 8px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      border: 1px solid rgba(255, 182, 193, 0.6);
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      cursor: pointer;
+    }
+    .polaroid-card:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 12px 25px -4px rgba(201, 24, 74, 0.2);
+    }
+    .washi-tape {
+      position: absolute;
+      top: -8px;
+      left: 50%;
+      transform: translateX(-50%) rotate(-2deg);
+      width: 50px;
+      height: 14px;
+      background: rgba(255, 209, 220, 0.85);
+      border: 1px dashed rgba(201, 24, 74, 0.3);
+      backdrop-filter: blur(2px);
+      z-index: 10;
+    }
+
+    /* Fade-in scroll panels */
+    .reveal-panel {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .reveal-panel.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Chapter Banner */
+    .chapter-banner {
+      background: linear-gradient(135deg, #ff758f 0%, #c9184a 100%);
+      color: white;
+      border: 3px solid #1a1c2e;
+      box-shadow: 4px 4px 0px 0px #1a1c2e;
+    }
+
+    /* Filter Pill */
+    .filter-btn.active {
+      background: #c9184a;
+      color: #ffffff;
+      border-color: #c9184a;
+      box-shadow: 0 4px 12px rgba(201, 24, 74, 0.35);
+    }
+  </style>
+</head>
+
+<body class="selection:bg-pink-300 selection:text-deepLove" onclick="handleGlobalClick(event)">
+
+  <!-- Background Music Audio Element -->
+  <audio id="bgMusic" loop preload="auto">
+    <source src="ngo-ngan-lyrics.mp3" type="audio/mpeg">
+    <source src="ngo%CC%9B--nga%CC%82n-lyrics.mp3" type="audio/mpeg">
+    <source src="ngơ--ngân-lyrics.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Reading Progress Bar -->
+  <div class="fixed top-0 left-0 w-full h-1.5 z-50 bg-pink-100">
+    <div id="readProgressBar" class="h-full bg-gradient-to-r from-pink-400 via-rose-500 to-deepLove w-0"></div>
+  </div>
+
+  <!-- Floating Sticky Header Controls -->
+  <header class="fixed top-3 left-0 right-0 z-40 px-3 max-w-md mx-auto flex items-center justify-between pointer-events-none">
+    
+    <!-- Music Player Controller Pill -->
+    <div class="pointer-events-auto bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-full border-2 border-pink-300 shadow-comic-sm flex items-center gap-2 cursor-pointer transition active:scale-95" 
+         id="musicBtn" onclick="toggleAudio(event)" title="Bật/Tắt nhạc nền Ngỡ Ngàng">
+      <div id="musicBars" class="flex items-end gap-0.5 h-4 music-paused">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <div class="flex flex-col text-left">
+        <span class="text-[9px] font-bold text-deepLove uppercase tracking-wider font-comic leading-none">Nhạc nền</span>
+        <span id="musicText" class="text-[10px] font-semibold text-slate-700 leading-none mt-0.5">Bật nhạc</span>
+      </div>
+    </div>
+
+    <!-- Quick Floating Heart Button -->
+    <div class="pointer-events-auto bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-full border-2 border-pink-300 shadow-comic-sm flex items-center gap-1.5 cursor-pointer transition active:scale-95 hover:bg-pink-50"
+         onclick="burstHeartsCenter(event)" title="Thả tim cho An & Nanh">
+      <span class="text-base animate-pulse">💖</span>
+      <span class="text-xs font-bold text-deepLove font-comic">Thả tim</span>
+    </div>
+  </header>
+
+  <!-- Autoplay Prompt Toast (Mobile Friendly) -->
+  <div id="musicToast" class="hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-slate-900/90 text-white text-xs px-4 py-2.5 rounded-full shadow-2xl flex items-center gap-2 border border-pink-400/50 backdrop-blur-md">
+    <span>🎵 Chạm vào màn hình để phát nhạc "Ngỡ Ngàng" nha!</span>
+    <button onclick="triggerMusicStart(event)" class="bg-pink-500 hover:bg-pink-600 text-white font-bold px-2.5 py-0.5 rounded-full text-[10px]">
+      Nghe ngay
+    </button>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- MAIN WEBTOON CONTAINER (Max-w-md Tối ưu cho Mobile Phone)                 -->
+  <!-- ========================================================================= -->
+  <div class="max-w-md mx-auto min-h-screen pb-20 relative pt-14">
+
+    <!-- ========================================================================= -->
+    <!-- BÌA TRUYỆN WEBTOON (HERO COVER)                                           -->
+    <!-- ========================================================================= -->
+    <section class="px-4 text-center relative pt-4 pb-8">
+      
+      <!-- Manhwa Title Badge -->
+      <div class="inline-flex items-center gap-1.5 bg-white border-2 border-deepLove text-deepLove px-3.5 py-1 rounded-full text-xs font-extrabold uppercase tracking-widest shadow-comic-sm font-comic mb-4">
+        <span>✨ WEBTOON KỶ NIỆM 3 THÁNG ✨</span>
+      </div>
+
+      <!-- Main Title -->
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 font-comic tracking-tight leading-tight">
+        CHUYỆN CỦA <br>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-deepLove via-pink-600 to-rose-500">
+          AN & NANH 💕
+        </span>
+      </h1>
+
+      <p class="text-xs sm:text-sm font-bold text-pink-700 font-hand text-base mt-2">
+        "3 tháng, 90 ngày & hàng ngàn khoảnh khắc ngọt ngào vô giá"
+      </p>
+
+      <!-- Romantic Date Counter Pill -->
+      <div class="mt-4 inline-flex items-center gap-2 bg-gradient-to-r from-pink-100 via-rose-100 to-pink-100 border-2 border-pink-300 rounded-2xl px-4 py-2 shadow-sm">
+        <span class="text-lg">🗓️</span>
+        <div class="text-left">
+          <p class="text-[10px] font-extrabold text-pink-600 uppercase tracking-wider">Cột mốc đặc biệt</p>
+          <p class="text-xs font-bold text-slate-800 font-comic">20/07/2026 ➔ 20/10/2026 (3 Tháng Tròn)</p>
+        </div>
+      </div>
+
+      <!-- Hero Webtoon Cover Art Frame -->
+      <div class="mt-6 webtoon-panel p-2 bg-gradient-to-b from-rose-100 via-pink-50 to-white shadow-comic-lg transform rotate-0 hover:rotate-1 transition-transform">
+        <div class="relative h-64 rounded-xl overflow-hidden bg-gradient-to-b from-pink-200 via-rose-100 to-amber-50 flex items-center justify-center">
+          <img src="chibi_chap4_hug.jpg" alt="An và Nanh" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent flex items-end p-4">
+            <div class="text-left text-white">
+              <span class="text-[10px] uppercase font-bold tracking-widest bg-deepLove px-2 py-0.5 rounded font-comic">Tác giả: An Phan</span>
+              <p class="text-xs font-semibold text-pink-200 mt-1">Dành tặng cho người con gái đặc biệt nhất • Nanh 🌸</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-3 text-center">
+          <p class="text-xs font-bold text-deepLove font-comic">
+            Cuộn xuống để lật giở từng trang truyện tình yêu của hai đứa 👇
+          </p>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- CHƯƠNG 1: NHỮNG ĐÊM THỨC TRẮNG CHỜ TIN NHẮN                                -->
+    <!-- ========================================================================= -->
+    <section id="chuong1" class="pt-6 px-4 space-y-6">
+
+      <!-- Chapter Banner -->
+      <div class="chapter-banner rounded-2xl py-3 px-4 shadow-md text-center">
+        <span class="text-[10px] tracking-widest font-extrabold uppercase bg-white/20 px-2.5 py-0.5 rounded-full font-comic">
+          CHƯƠNG 01
+        </span>
+        <h2 class="text-lg sm:text-xl font-bold font-comic mt-1 leading-tight">
+          NHỮNG ĐÊM THỨC TRẮNG CHỜ TIN NHẮN
+        </h2>
+      </div>
+
+      <!-- PANEL 1: Ngày em bước đến -->
+      <div class="webtoon-panel reveal-panel">
+        <div class="p-3 bg-gradient-to-b from-amber-50 to-rose-50 border-b-2 border-dashed border-pink-200 flex items-center justify-between">
+          <span class="text-[10px] font-bold text-deepLove bg-pink-100 px-2 py-0.5 rounded-md uppercase font-comic">
+            #1 • Nắng ấm
+          </span>
+          <span class="sfx-text text-pink-600 text-xs">*Ting ting~*</span>
+        </div>
+
+        <div class="relative h-44 bg-gradient-to-tr from-amber-100 via-rose-100 to-pink-200 flex items-center justify-center overflow-hidden">
+          <div class="w-20 h-20 rounded-full bg-gradient-to-tr from-amber-400 to-yellow-200 shadow-lg flex items-center justify-center animate-pulse">
+            <span class="text-4xl">☀️</span>
+          </div>
+          <div class="absolute top-4 left-6 text-xl animate-bounce">🌸</div>
+          <div class="absolute bottom-6 right-10 text-base">✨</div>
+          <div class="absolute bottom-4 left-12 text-sm">🌷</div>
+        </div>
+
+        <div class="p-4 bg-white">
+          <div class="p-3 bg-pink-50/70 rounded-xl border border-pink-200 text-xs sm:text-sm text-pink-900 leading-relaxed font-medium">
+            <span class="text-deepLove font-bold text-sm block mb-1">🌤️ Ngày em đến:</span>
+            "Cảm ơn em đã bước vào thế giới của anh vào một ngày nắng thật đẹp, mang theo nụ cười làm xao xuyến cả một góc trời."
+          </div>
+        </div>
+      </div>
+
+      <!-- PANEL 2: Giông bão cùng nhau -->
+      <div class="webtoon-panel reveal-panel">
+        <div class="p-3 bg-gradient-to-b from-slate-100 to-blue-50 border-b-2 border-dashed border-blue-200 flex items-center justify-between">
+          <span class="text-[10px] font-bold text-blue-700 bg-blue-100 px-2 py-0.5 rounded-md uppercase font-comic">
+            #2 • Giông bão
+          </span>
+          <span class="sfx-text text-blue-600 text-xs">*Rì rào~*</span>
+        </div>
+
+        <div class="relative h-44 bg-gradient-to-b from-slate-700 via-slate-600 to-blue-900 flex items-center justify-center overflow-hidden text-center">
+          <div class="z-10">
+            <div class="text-5xl filter drop-shadow-lg mb-2 animate-pulse">☔</div>
+            <div class="inline-block bg-white/90 backdrop-blur-md px-3.5 py-1 rounded-full text-xs font-bold text-slate-800 shadow">
+              Có Nanh ở đây rồi 💕
+            </div>
+          </div>
+        </div>
+
+        <div class="p-4 bg-white">
+          <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 text-xs sm:text-sm text-slate-800 leading-relaxed font-medium">
+            "...và cảm ơn em vì vẫn chọn ở lại đây cùng anh, đi qua cả những ngày dở chứng giông bão hihi."
+          </div>
+        </div>
+      </div>
+
+      <!-- PANEL 3 (CHIBI FULL PANEL): An thức đêm quầng thâm mắt chờ tin nhắn -->
+      <div class="webtoon-panel reveal-panel border-4 border-indigo-400">
+        <div class="p-3 bg-gradient-to-r from-indigo-900 to-slate-900 text-white flex items-center justify-between">
+          <span class="text-[10px] font-bold bg-indigo-500/50 px-2 py-0.5 rounded uppercase font-comic">
+            #3 • Hồi Ức 2:00 AM (Hài hước)
+          </span>
+          <span class="sfx-text text-yellow-300 text-xs">*Seen 3 tiếng trước*</span>
+        </div>
+
+        <!-- Chibi Illustration Chapter 1 -->
+        <div class="relative overflow-hidden bg-slate-950">
+          <img src="chibi_chap1_late_night.jpg" alt="An thức đêm chờ tin nhắn Nanh" class="w-full h-auto object-cover">
+        </div>
+
+        <!-- Speech Bubble & Narration Box -->
+        <div class="p-4 bg-white space-y-3">
+          <div class="speech-bubble tail-bottom bg-rose-50 border-rose-400 text-deepLove text-xs">
+            "Màn hình sáng một cái là tim thót lại... Vậy mà ai kia Seen 3 tiếng chưa thèm rep luôn trời ơiii! 😭💔"
+          </div>
+
+          <div class="p-3 bg-indigo-50/70 rounded-xl border border-indigo-200 text-xs sm:text-sm text-indigo-950 leading-relaxed font-medium">
+            <span class="font-bold text-indigo-800 block mb-1">📱 Canh me từng giây từng phút:</span>
+            "Nhớ hồi mới tìm hiểu nhau, An cầm khư khư điện thoại canh me từng giây. Đợi mòn mỏi ruột gan quặn thắt gì đâu á! Mới có 3 tháng thôi mà trải qua đủ mọi thang bậc cảm xúc luôn qué Nanh ơi!"
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- CHƯƠNG 2: CÚ RẼ TẠI NHÀ SÁCH BẠCH ĐẰNG                                     -->
+    <!-- ========================================================================= -->
+    <section id="chuong2" class="pt-10 px-4 space-y-6">
+
+      <!-- Chapter Banner -->
+      <div class="chapter-banner rounded-2xl py-3 px-4 shadow-md text-center">
+        <span class="text-[10px] tracking-widest font-extrabold uppercase bg-white/20 px-2.5 py-0.5 rounded-full font-comic">
+          CHƯƠNG 02
+        </span>
+        <h2 class="text-lg sm:text-xl font-bold font-comic mt-1 leading-tight">
+          CÚ RẼ ĐỊNH MỆNH – "GÌ VẬY CHA NỘIII?!"
+        </h2>
+      </div>
+
+      <!-- PANEL 4: Nhường nhịn & Thấu hiểu -->
+      <div class="webtoon-panel reveal-panel">
+        <div class="p-3 bg-gradient-to-b from-amber-50 to-pink-50 border-b-2 border-dashed border-pink-200 flex items-center justify-between">
+          <span class="text-[10px] font-bold text-amber-800 bg-amber-100 px-2 py-0.5 rounded-md uppercase font-comic">
+            #4 • Nhường nhịn & Thấu hiểu
+          </span>
+          <span class="sfx-text text-pink-500 text-xs">*Cảm kích lắm~*</span>
+        </div>
+
+        <div class="p-4 bg-gradient-to-b from-rose-50/60 to-white flex items-center justify-center gap-3">
+          <span class="text-4xl">👼💕</span>
+          <div class="text-left">
+            <span class="text-xs font-bold text-deepLove block font-comic">Nanh cưng xỉu</span>
+            <span class="text-[11px] text-slate-600">Lúc nào cũng biết nhường nhịn và vị tha ❤️</span>
+          </div>
+        </div>
+
+        <div class="p-4 bg-white border-t border-pink-100">
+          <div class="p-3 bg-amber-50/70 rounded-xl border border-amber-200 text-xs sm:text-sm text-amber-950 leading-relaxed font-medium">
+            "An xin lỗi vì những lúc vô ý làm Nanh buồn hay giận. An biết ơn lémmm mấy lúc Nanh chịu nhường nhịn, hạ mình xuống vì An và vì hai đứa."
+          </div>
+        </div>
+      </div>
+
+      <!-- PANEL 5 (CHIBI FULL PANEL): Nhà Sách Bạch Đằng "Gì vậy cha nộiii?!" -->
+      <div class="webtoon-panel reveal-panel border-4 border-rose-500">
+        <div class="p-3 bg-gradient-to-r from-red-500 to-rose-600 text-white flex items-center justify-between">
+          <span class="text-[10px] font-bold bg-white/20 px-2 py-0.5 rounded uppercase font-comic">
+            #5 • Ký ức Nhà Sách Bạch Đằng
+          </span>
+          <span class="sfx-text text-yellow-300 text-xs">*Toanggg quả này rồi*</span>
+        </div>
+
+        <!-- Chibi Illustration Chapter 2 -->
+        <div class="relative overflow-hidden bg-rose-50">
+          <img src="chibi_chap2_bach_dang.jpg" alt="Khoảnh khắc Gì vậy cha nội ở nhà sách Bạch Đằng" class="w-full h-auto object-cover">
+        </div>
+
+        <div class="p-4 bg-white space-y-3">
+          <!-- Spiky Bubble Hét to -->
+          <div class="spiky-bubble p-3 text-center">
+            <p class="text-base sm:text-lg font-extrabold font-comic uppercase tracking-wide">
+              ⚡ "GÌ VẬY CHA NỘIII?! ĐI RAAAAA!" ⚡
+            </p>
+            <span class="text-[10px] font-bold uppercase bg-rose-200 text-rose-800 px-2 py-0.5 rounded-full inline-block mt-1">
+              *Hét to chấn động cả nhà sách Bạch Đằng*
+            </span>
+          </div>
+
+          <!-- Dòng tự sự hài hước -->
+          <div class="p-3 bg-rose-50/70 rounded-xl border border-rose-200 text-xs sm:text-sm text-pink-950 leading-relaxed font-medium">
+            <span class="font-bold text-deepLove block mb-1">🗿 An biến thành tượng đá:</span>
+            "Vừa chạm nhẹ vào vai định tạo bất ngờ, ai dè bị Nanh hét toáng lên đuổi đi! Lúc đó vừa quê vừa buồn vãiii, bụng bảo dạ phen này toang thật rồi kkk!"
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- CHƯƠNG 3: CHIẾN THẦN BẮN CÁ SATRA & CÁI GẬT ĐẦU ĐỊNH MỆNH                 -->
+    <!-- ========================================================================= -->
+    <section id="chuong3" class="pt-10 px-4 space-y-6">
+
+      <!-- Chapter Banner -->
+      <div class="chapter-banner rounded-2xl py-3 px-4 shadow-md text-center">
+        <span class="text-[10px] tracking-widest font-extrabold uppercase bg-white/20 px-2.5 py-0.5 rounded-full font-comic">
+          CHƯƠNG 03
+        </span>
+        <h2 class="text-lg sm:text-xl font-bold font-comic mt-1 leading-tight">
+          CHIẾN THẦN BẮN CÁ SATRA & CÁI GẬT ĐẦU ĐỊNH MỆNH
+        </h2>
+      </div>
+
+      <!-- PANEL 6: Máy bắn cá Satra côm cốp (7-8h sáng đã đi bắn cá) -->
+      <div class="webtoon-panel reveal-panel">
+        <div class="p-3 bg-gradient-to-r from-teal-500 to-cyan-600 text-white flex items-center justify-between">
+          <span class="text-[10px] font-bold bg-white/20 px-2 py-0.5 rounded uppercase font-comic">
+            #6 • Khu Trò Chơi Satra
+          </span>
+          <span class="sfx-text text-yellow-300 text-xs">*Côm cốp!! Côm cốp!!*</span>
+        </div>
+
+        <div class="p-4 bg-gradient-to-b from-cyan-900 to-slate-900 text-white relative overflow-hidden text-center py-6">
+          <div class="flex items-center justify-center gap-3 text-4xl mb-2">
+            <span class="animate-bounce">🐟</span>
+            <span class="text-2xl animate-spin">🪙</span>
+            <span class="animate-bounce" style="animation-delay: 0.2s;">👾</span>
+          </div>
+          <h3 class="text-lg font-extrabold font-comic text-yellow-300">
+            CHIẾN THẦN BẮN CÁ SATRA
+          </h3>
+          <p class="text-xs text-cyan-200 mt-1 font-semibold">
+            Hai đứa đập phím côm cốp, xu văng tung tóe vui quên lối về!
+          </p>
+        </div>
+
+        <div class="p-4 bg-white border-t border-cyan-100">
+          <div class="p-3 bg-cyan-50/70 rounded-xl border border-cyan-200 text-xs sm:text-sm text-cyan-950 leading-relaxed font-medium">
+            <span class="font-bold text-teal-800 block mb-1">🎮 Nghiện bắn cá Satra từ 7 - 8h sáng:</span>
+            "Sau vụ 'Gì vậy cha nộiii', phát hiện ra Nanh bị nghiện bắn cá ở Satra giai đoạn này kkk! Nhớ có lúc mới 7 - 8h sáng tinh mơ hai đứa đã dắt nhau qua Satra đập phím côm cốp, càn quét máy game quá trời quá đất vui gì đâu á!"
+          </div>
+        </div>
+      </div>
+
+      <!-- PANEL 7 (CHIBI FULL PANEL): Tỏ tình trên xe máy đêm -->
+      <div class="webtoon-panel reveal-panel border-4 border-indigo-500">
+        <div class="p-3 bg-gradient-to-r from-indigo-800 to-purple-900 text-white flex items-center justify-between">
+          <span class="text-[10px] font-bold bg-white/20 px-2 py-0.5 rounded uppercase font-comic">
+            #7 • Đêm Định Mệnh
+          </span>
+          <span class="sfx-text text-pink-300 text-xs">*Vù vù gió mát~*</span>
+        </div>
+
+        <!-- Chibi Illustration Chapter 3 -->
+        <div class="relative overflow-hidden bg-slate-950">
+          <img src="chibi_chap3_motorbike.jpg" alt="An tỏ tình Nanh trên xe máy đêm" class="w-full h-auto object-cover">
+        </div>
+
+        <div class="p-4 bg-white space-y-3">
+          <div class="speech-bubble tail-bottom bg-pink-50 border-pink-400 text-deepLove text-xs">
+            "Miệng run cầm cập, tim đập thình thịch như muốn nhảy ra ngoài... nhưng thật lòng yêu Nanh nhiều lắm!"
+          </div>
+
+          <div class="p-3 bg-purple-50/70 rounded-xl border border-purple-200 text-xs sm:text-sm text-purple-950 leading-relaxed font-medium">
+            <span class="font-bold text-purple-900 block mb-1">🛵 Lời tỏ tình trên đường về:</span>
+            "An gom hết can đảm tỏ tình trên đoạn đường xe máy chở Nanh về lúc đêm muộn. Tiếng gió thổi mát rượi, tim đập thình thịch vù vù... Nanh khẽ ôm eo rồi tựa đầu vào lưng An gật đầu đồng ý. Cảm giác lúc đó như muốn bay luôn cả người lẫn xe lên trời vì sướng á!"
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- CHƯƠNG 4: CÁI ÔM ĐẦU TIÊN VÀ CHẶNG ĐƯỜNG PHÍA TRƯỚC                       -->
+    <!-- ========================================================================= -->
+    <section id="chuong4" class="pt-10 px-4 space-y-6">
+
+      <!-- Chapter Banner -->
+      <div class="chapter-banner rounded-2xl py-3 px-4 shadow-md text-center">
+        <span class="text-[10px] tracking-widest font-extrabold uppercase bg-white/20 px-2.5 py-0.5 rounded-full font-comic">
+          CHƯƠNG 04
+        </span>
+        <h2 class="text-lg sm:text-xl font-bold font-comic mt-1 leading-tight">
+          CÁI ÔM ĐẦU TIÊN & HÀNH TRÌNH PHÍA TRƯỚC
+        </h2>
+      </div>
+
+      <!-- PANEL 8 (CHIBI FULL PANEL): Cái ôm đầu tiên trọn vẹn -->
+      <div class="webtoon-panel reveal-panel border-4 border-deepLove shadow-2xl">
+        <div class="p-3 bg-gradient-to-r from-pink-500 via-rose-500 to-deepLove text-white flex items-center justify-between">
+          <span class="text-[10px] font-bold bg-white/20 px-2 py-0.5 rounded uppercase font-comic">
+            #8 • Cực Đại Cảm Xúc
+          </span>
+          <span class="sfx-text text-yellow-200 text-xs">*Ấm áp khôn xiết~*</span>
+        </div>
+
+        <!-- Chibi Illustration Chapter 4 -->
+        <div class="relative overflow-hidden bg-slate-950">
+          <img src="chibi_chap4_hug.jpg" alt="Cái ôm đầu tiên của An và Nanh" class="w-full h-auto object-cover">
+        </div>
+
+        <div class="p-4 bg-white space-y-3">
+          <div class="speech-bubble tail-bottom bg-rose-50 border-rose-400 text-deepLove text-xs">
+            "Từ đứa đợi rep héo mòn, giờ được ôm em trọn vẹn trong vòng tay... Cảm giác ấm áp mê man muốn xỉu luôn hehe! 🫂💖"
+          </div>
+
+          <div class="p-3 bg-rose-50/70 rounded-xl border border-rose-200 text-xs sm:text-sm text-pink-950 leading-relaxed font-medium">
+            <span class="font-bold text-deepLove block mb-1">🌅 Hứa cùng nhau đi thật xa:</span>
+            "Cảm ơn Nanh vì 3 tháng qua đã chịu đựng và yêu thương An nhiều tới vậy. Chặng đường phía trước của tụi mình, hai đứa cứ tiếp tục nắm tay nhau đi qua thêm thật nhiều chương mới nữa nghen em!"
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- BẢO TÀNG KỶ NIỆM 3 THÁNG: TOÀN BỘ 29 ẢNH THẬT ĐÃ ĐƯỢC CHUẨN HÓA 100%      -->
+    <!-- ========================================================================= -->
+    <section id="museum" class="mt-14 px-3 py-8 bg-gradient-to-b from-rose-50 via-pink-50/50 to-white rounded-3xl border-2 border-dashed border-deepLove mx-2">
+      
+      <!-- Section Title & Intro -->
+      <div class="text-center mb-6">
+        <span class="text-[11px] font-extrabold uppercase bg-deepLove text-white px-3.5 py-1 rounded-full tracking-wider font-comic shadow">
+          📸 BẢO TÀNG KỶ NIỆM 3 THÁNG
+        </span>
+        <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 font-comic mt-2">
+          29 KHOẢNH KHẮC VÔ GIÁ CỦA HAI ĐỨA 💕
+        </h3>
+        <p class="text-xs text-pink-700 font-medium mt-1">
+          Đúng từng bức ảnh, chuẩn từng bối cảnh kỷ niệm. Chạm vào ảnh để phóng to & thả tim nha!
+        </p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="flex items-center justify-center gap-1.5 flex-wrap mb-6 px-1">
+        <button onclick="filterGallery('all')" class="filter-btn active text-xs font-bold px-3 py-1.5 rounded-full border border-pink-300 bg-white text-slate-700 transition active:scale-95 font-comic" data-filter="all">
+          🌟 Tất cả (29)
+        </button>
+        <button onclick="filterGallery('vungtau')" class="filter-btn text-xs font-bold px-3 py-1.5 rounded-full border border-pink-300 bg-white text-slate-700 transition active:scale-95 font-comic" data-filter="vungtau">
+          🛵 Vũng Tàu (11)
+        </button>
+        <button onclick="filterGallery('photobooth')" class="filter-btn text-xs font-bold px-3 py-1.5 rounded-full border border-pink-300 bg-white text-slate-700 transition active:scale-95 font-comic" data-filter="photobooth">
+          📸 Photobooth (11)
+        </button>
+        <button onclick="filterGallery('daily')" class="filter-btn text-xs font-bold px-3 py-1.5 rounded-full border border-pink-300 bg-white text-slate-700 transition active:scale-95 font-comic" data-filter="daily">
+          💖 Hẹn hò & Dìm (7)
+        </button>
+      </div>
+
+      <!-- 2-Column Responsive Polaroid Grid for all 29 Photos -->
+      <div id="galleryGrid" class="grid grid-cols-2 gap-3">
+
+        <!-- 1. XE MÁY: Đêm định mệnh tỏ tình -->
+        <div class="gallery-item polaroid-card transform -rotate-1" data-cat="vungtau" onclick="openLightboxByIndex(0)">
+          <div class="washi-tape"></div>
+          <div class="h-36 rounded-lg overflow-hidden bg-pink-100">
+            <img src="att.4B35W753UbGObBqlD_kluz-Yk-jju76mgTbW5JjuLrw.JPG" alt="Xe máy đêm tỏ tình" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Đêm xe máy tỏ tình 🛵💨</p>
+          <span class="text-[8px] font-semibold text-rose-500 block text-center uppercase tracking-wider">Đêm định mệnh</span>
+        </div>
+
+        <!-- 2. VŨNG TÀU: Nanh xinh lung linh dạo phố đêm -->
+        <div class="gallery-item polaroid-card transform rotate-1" data-cat="vungtau" onclick="openLightboxByIndex(1)">
+          <div class="washi-tape"></div>
+          <div class="h-36 rounded-lg overflow-hidden bg-pink-100">
+            <img src="IMG_9812.JPG" alt="Nàng thơ Vũng Tàu" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Nàng thơ Vũng Tàu ✨</p>
+          <span class="text-[8px] font-semibold text-rose-500 block text-center uppercase tracking-wider">Nanh cưng xỉu</span>
+        </div>
+
+        <!-- 3. VŨNG TÀU: Nanh selfie An nằm giường -->
+        <div class="gallery-item polaroid-card transform rotate-2" data-cat="vungtau" onclick="openLightboxByIndex(2)">
+          <div class="washi-tape"></div>
+          <div class="h-36 rounded-lg overflow-hidden bg-pink-100">
+            <img src="att.vM2CgexBs3GZe9mWQOJGH8LEOdwJSRAV_e6jAYw0Fxc.JPG" alt="Nanh selfie khách sạn" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Em chụp, anh làm nền kkk 📸</p>
+          <span class="text-[8px] font-semibold text-rose-500 block text-center uppercase tracking-wider">Khách sạn Vũng Tàu</span>
+        </div>
+
+        <!-- 4. VŨNG TÀU: Cặp đôi mỏ vịt 1 -->
+        <div class="gallery-item polaroid-card transform -rotate-2" data-cat="vungtau" onclick="openLightboxByIndex(3)">
+          <div class="washi-tape"></div>
+          <div class="h-36 rounded-lg overflow-hidden bg-pink-100">
+            <img src="IMG_9565.jpg" alt="Mỏ vịt part 1" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Cặp đôi mỏ vịt part 1 🦆</p>
+          <span class="text-[8px] font-semibold text-rose-500 block text-center uppercase tracking-wider">Nhí nhố cùng nhau</span>
+        </div>
+
+        <!-- 5. VŨNG TÀU: Cặp đôi mỏ vịt 2 -->
+        <div class="gallery-item polaroid-card transform rotate-1" data-cat="vungtau" onclick="openLightboxByIndex(4)">
+          <div class="washi-tape"></div>
+          <div class="h-36 rounded-lg overflow-hidden bg-pink-100">
+            <img src="IMG_9566.jpg" alt="Mỏ vịt part 2" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Cặp đôi mỏ vịt part 2 🦆</p>
+          <span class="text-[8px] font-semibold text-rose-500 block text-center uppercase tracking-wider">Cưng không chịu nổi</span>
+        </div>
+
+        <!-- 6. VŨNG TÀU: Nanh chống cằm dịu dàng -->
+        <div class="gallery-item polaroid-card transform -rotate-1" data-cat="vungtau" onclick="openLightboxByIndex(5)">
+          <div class="washi-tape"></div>
+          <div class="h-36 rounded-lg overflow-hidden bg-pink-100">
+            <img src="att.mi8_OPmUbNGKa9O-pQnRAoV1C9WYghvxP9DulJhOSiI.JPG" alt="Nanh chống cằm" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Góc nghiêng dịu dàng 💕</p>
+          <span class="text-[8px] font-semibold text-rose-500 block text-center uppercase tracking-wider">Say đắm ánh mắt ấy</span>
+        </div>
+
+        <!-- 7. VŨNG TÀU: Nanh má bánh bao chu môi -->
+        <div class="gallery-item polaroid-card transform rotate-2" data-cat="vungtau" onclick="openLightboxByIndex(6)">
+          <div class="washi-tape"></div>
+          <div class="h-36 rounded-lg overflow-hidden bg-pink-100">
+            <img src="att.ncvXeJW8spjINe2V_I_HIJR29l-07BnWqzIiCEyaUkc.JPG" alt="Nanh má bánh bao" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Má bánh bao muốn cắn 🥐</p>
+          <span class="text-[8px] font-semibold text-rose-500 block text-center uppercase tracking-wider">Chu môi siêu đáng yêu</span>
+        </div>
+
+        <!-- 8. VŨNG TÀU: Nanh giơ tay lên đầu tạo dáng -->
+        <div class="gallery-item polaroid-card transform -rotate-2" data-cat="vungtau" onclick="openLightboxByIndex(7)">
+          <div class="washi-tape"></div>
+          <div class="h-36 rounded-lg overflow-hidden bg-pink-100">
+            <img src="att.OSRwvkP2lZKctLq506mAI3oDL-QEpSxpmHhpOVC68x8.JPG" alt="Nanh tạo dáng" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Tạo dáng nhí nhố ✌️</p>
+          <span class="text-[8px] font-semibold text-rose-500 block text-center uppercase tracking-wider">Năng lượng vui vẻ</span>
+        </div>
+
+        <!-- 9. VŨNG TÀU: Nanh selfie gương phòng nghỉ -->
+        <div class="gallery-item polaroid-card transform rotate-1" data-cat="vungtau" onclick="openLightboxByIndex(8)">
+          <div class="washi-tape"></div>
+          <div class="h-36 rounded-lg overflow-hidden bg-pink-100">
+            <img src="att.2RpI_JXivwOSVTg2pYwGTSbxJm6ue8mz7ii9Krd1cno.JPG" alt="Nanh gương" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Check-in outfit xinh xắn 🪞</p>
+          <span class="text-[8px] font-semibold text-rose-500 block text-center uppercase tracking-wider">Kỷ niệm khách sạn</span>
+        </div>
+
+        <!-- 10. VŨNG TÀU: An selfie ngơ ngác -->
+        <div class="gallery-item polaroid-card transform -rotate-1" data-cat="vungtau" onclick="openLightboxByIndex(9)">
+          <div class="washi-tape"></div>
+          <div class="h-36 rounded-lg overflow-hidden bg-pink-100">
+            <img src="IMG_9809.jpg" alt="An ngơ ngác" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Kẻ say tình ngơ ngác 🤡</p>
+          <span class="text-[8px] font-semibold text-rose-500 block text-center uppercase tracking-wider">Gương mặt hạnh phúc</span>
+        </div>
+
+        <!-- 11. VŨNG TÀU: Gương homestay lưu niệm -->
+        <div class="gallery-item polaroid-card transform rotate-2" data-cat="vungtau" onclick="openLightboxByIndex(10)">
+          <div class="washi-tape"></div>
+          <div class="h-36 rounded-lg overflow-hidden bg-pink-100">
+            <img src="IMG_9837.jpg" alt="Gương kỷ niệm" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Góc nhỏ kỷ niệm 🏨</p>
+          <span class="text-[8px] font-semibold text-rose-500 block text-center uppercase tracking-wider">Kỷ niệm bên nhau</span>
+        </div>
+
+        <!-- 12. PHOTOBOOTH 1: Tai heo & Cá mập xanh 1 -->
+        <div class="gallery-item polaroid-card transform -rotate-2" data-cat="photobooth" onclick="openLightboxByIndex(11)">
+          <div class="washi-tape"></div>
+          <div class="h-36 rounded-lg overflow-hidden bg-pink-100">
+            <img src="IMG_0278.JPG" alt="Tai heo & Cá mập" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Tai heo & Cá mập xanh 🐷🦈</p>
+          <span class="text-[8px] font-semibold text-pink-500 block text-center uppercase tracking-wider">Studio Hồng</span>
+        </div>
+
+        <!-- 13. PHOTOBOOTH 1: Ôm má cười tươi -->
+        <div class="gallery-item polaroid-card transform rotate-1" data-cat="photobooth" onclick="openLightboxByIndex(12)">
+          <div class="washi-tape"></div>
+          <div class="h-36 rounded-lg overflow-hidden bg-pink-100">
+            <img src="IMG_0279.JPG" alt="Nụ cười rực rỡ" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Nụ cười rạng rỡ nhất 🥰</p>
+          <span class="text-[8px] font-semibold text-pink-500 block text-center uppercase tracking-wider">Studio Hồng</span>
+        </div>
+
+        <!-- 14. PHOTOBOOTH 1: Ghép đôi trái tim -->
+        <div class="gallery-item polaroid-card transform -rotate-1" data-cat="photobooth" onclick="openLightboxByIndex(13)">
+          <div class="washi-tape"></div>
+          <div class="h-36 rounded-lg overflow-hidden bg-pink-100">
+            <img src="IMG_0283.JPG" alt="Ghép đôi trái tim" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Ghép đôi trái tim 💕</p>
+          <span class="text-[8px] font-semibold text-pink-500 block text-center uppercase tracking-wider">Studio Hồng</span>
+        </div>
+
+        <!-- 15. PHOTOBOOTH 1: Cười tít mắt -->
+        <div class="gallery-item polaroid-card transform rotate-2" data-cat="photobooth" onclick="openLightboxByIndex(14)">
+          <div class="washi-tape"></div>
+          <div class="h-36 rounded-lg overflow-hidden bg-pink-100">
+            <img src="IMG_0285.JPG" alt="Cười tít mắt" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Cười tít mắt siêu ngọt 🌸</p>
+          <span class="text-[8px] font-semibold text-pink-500 block text-center uppercase tracking-wider">Studio Hồng</span>
+        </div>
+
+        <!-- 16. PHOTOBOOTH 1: Nanh solo kẹp sao hồng -->
+        <div class="gallery-item polaroid-card transform -rotate-2" data-cat="photobooth" onclick="openLightboxByIndex(15)">
+          <div class="washi-tape"></div>
+          <div class="h-36 rounded-lg overflow-hidden bg-pink-100">
+            <img src="att.ENpD5wsTP45a8HfjhrXXgjG17vuPExOKnwYGuOVZhO8.JPG" alt="Nanh solo photobooth" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Nanh kẹp tóc ngôi sao ⭐</p>
+          <span class="text-[8px] font-semibold text-pink-500 block text-center uppercase tracking-wider">Studio Hồng</span>
+        </div>
+
+        <!-- 17. PHOTOBOOTH 2: Mèo nơ hồng & Gà con vàng -->
+        <div class="gallery-item polaroid-card transform rotate-1" data-cat="photobooth" onclick="openLightboxByIndex(16)">
+          <div class="washi-tape"></div>
+          <div class="h-36 rounded-lg overflow-hidden bg-slate-900">
+            <img src="IMG_0385.JPG" alt="Mèo con & Gà con" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Mèo nơ hồng & Gà con 🐱🐥</p>
+          <span class="text-[8px] font-semibold text-purple-600 block text-center uppercase tracking-wider">Studio Ngàn Sao</span>
+        </div>
+
+        <!-- 18. PHOTOBOOTH 2: Dáng ngầu -->
+        <div class="gallery-item polaroid-card transform -rotate-1" data-cat="photobooth" onclick="openLightboxByIndex(17)">
+          <div class="washi-tape"></div>
+          <div class="h-36 rounded-lg overflow-hidden bg-slate-900">
+            <img src="IMG_0386.JPG" alt="Dáng ngầu" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Tạo dáng cực ngầu 😎</p>
+          <span class="text-[8px] font-semibold text-purple-600 block text-center uppercase tracking-wider">Studio Ngàn Sao</span>
+        </div>
+
+        <!-- 19. PHOTOBOOTH 2: Cười thả ga -->
+        <div class="gallery-item polaroid-card transform rotate-2" data-cat="photobooth" onclick="openLightboxByIndex(18)">
+          <div class="washi-tape"></div>
+          <div class="h-36 rounded-lg overflow-hidden bg-slate-900">
+            <img src="IMG_0390.JPG" alt="Cười thả ga" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Cười thả ga quên lối 🌟</p>
+          <span class="text-[8px] font-semibold text-purple-600 block text-center uppercase tracking-wider">Studio Ngàn Sao</span>
+        </div>
+
+        <!-- 20. PHOTOBOOTH 2: Ánh mắt nhìn nhau -->
+        <div class="gallery-item polaroid-card transform -rotate-2" data-cat="photobooth" onclick="openLightboxByIndex(19)">
+          <div class="washi-tape"></div>
+          <div class="h-36 rounded-lg overflow-hidden bg-slate-900">
+            <img src="IMG_0391.jpg" alt="Ánh mắt nhìn nhau" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Ánh mắt lấp lánh nhìn nhau 💫</p>
+          <span class="text-[8px] font-semibold text-purple-600 block text-center uppercase tracking-wider">Studio Ngàn Sao</span>
+        </div>
+
+        <!-- 21. PHOTOBOOTH 2: Tung chiêu biểu cảm -->
+        <div class="gallery-item polaroid-card transform rotate-1" data-cat="photobooth" onclick="openLightboxByIndex(20)">
+          <div class="washi-tape"></div>
+          <div class="h-36 rounded-lg overflow-hidden bg-slate-900">
+            <img src="IMG_0392.JPG" alt="Tung chiêu độc lạ" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Tung chiêu độc lạ 🤪</p>
+          <span class="text-[8px] font-semibold text-purple-600 block text-center uppercase tracking-wider">Studio Ngàn Sao</span>
+        </div>
+
+        <!-- 22. PHOTOBOOTH 2: Đáng yêu khó đỡ -->
+        <div class="gallery-item polaroid-card transform -rotate-1" data-cat="photobooth" onclick="openLightboxByIndex(21)">
+          <div class="washi-tape"></div>
+          <div class="h-36 rounded-lg overflow-hidden bg-slate-900">
+            <img src="IMG_0393.JPG" alt="Đáng yêu khó đỡ" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Đáng yêu khó đỡ 💖</p>
+          <span class="text-[8px] font-semibold text-purple-600 block text-center uppercase tracking-wider">Studio Ngàn Sao</span>
+        </div>
+
+        <!-- 23. DAILY: Nanh ôm bó hoa pastel khổng lồ -->
+        <div class="gallery-item polaroid-card transform rotate-2" data-cat="daily" onclick="openLightboxByIndex(22)">
+          <div class="washi-tape"></div>
+          <div class="h-36 rounded-lg overflow-hidden bg-pink-100">
+            <img src="att.KddoKIRfZsVYnUbKl8AxrdFua63ttn2ze9bDhz7m6xA.JPG" alt="Nanh ôm bó hoa" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Bó hoa tặng em bé chu môi 💐</p>
+          <span class="text-[8px] font-semibold text-emerald-600 block text-center uppercase tracking-wider">Ngọt ngào lãng mạn</span>
+        </div>
+
+        <!-- 24. DAILY: Dạo phố đêm cầm đèn phát sáng -->
+        <div class="gallery-item polaroid-card transform -rotate-2" data-cat="daily" onclick="openLightboxByIndex(23)">
+          <div class="washi-tape"></div>
+          <div class="h-36 rounded-lg overflow-hidden bg-pink-100">
+            <img src="IMG_0245.jpg" alt="Dạo phố đèn pha lê" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Dạo phố đêm đèn pha lê 🔮</p>
+          <span class="text-[8px] font-semibold text-emerald-600 block text-center uppercase tracking-wider">Đêm Sài Gòn</span>
+        </div>
+
+        <!-- 25. DAILY: Chuyến xe dán sao trên trán -->
+        <div class="gallery-item polaroid-card transform rotate-1" data-cat="daily" onclick="openLightboxByIndex(24)">
+          <div class="washi-tape"></div>
+          <div class="h-36 rounded-lg overflow-hidden bg-pink-100">
+            <img src="att.WJJVp0zrYL7D0gRVm6Op1vptfnAhPRIZaRJEozCdj1s.JPG" alt="Chuyến xe dán sao" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Dán sao trên trán đi vi vu 🚌⭐</p>
+          <span class="text-[8px] font-semibold text-emerald-600 block text-center uppercase tracking-wider">Chuyến xe đi chơi</span>
+        </div>
+
+        <!-- 26. DAILY: Sáng sớm bình yên bên nhau -->
+        <div class="gallery-item polaroid-card transform -rotate-1" data-cat="daily" onclick="openLightboxByIndex(25)">
+          <div class="washi-tape"></div>
+          <div class="h-36 rounded-lg overflow-hidden bg-pink-100">
+            <img src="IMG_9752.jpg" alt="Sáng sớm thức giấc" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Bình yên thức giấc bên em ☀️</p>
+          <span class="text-[8px] font-semibold text-emerald-600 block text-center uppercase tracking-wider">Mỗi sớm mai</span>
+        </div>
+
+        <!-- 27. DAILY / DÌM: Nanh cằm nọng kính cận màn hình rọi -->
+        <div class="gallery-item polaroid-card transform rotate-2" data-cat="daily" onclick="openLightboxByIndex(26)">
+          <div class="washi-tape"></div>
+          <div class="h-36 rounded-lg overflow-hidden bg-pink-100">
+            <img src="att.RuQvDlcplUAgZbV9Tj16QDBJ7eRwgqJeepyjG7K0FEM.JPG" alt="Nanh cằm nọng kính cận" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Góc dìm cằm nọng vô giá kkk 😂</p>
+          <span class="text-[8px] font-semibold text-amber-600 block text-center uppercase tracking-wider">Dìm nhưng mà yêu</span>
+        </div>
+
+        <!-- 28. DAILY / DÌM: An mắt nhắm tịt quán ăn cờ đỏ -->
+        <div class="gallery-item polaroid-card transform -rotate-2" data-cat="daily" onclick="openLightboxByIndex(27)">
+          <div class="washi-tape"></div>
+          <div class="h-36 rounded-lg overflow-hidden bg-pink-100">
+            <img src="att.pvOv3yxr21uBYQYt3u5Ag4dOGfl1gMd5UnM0xLsA460.JPG" alt="An nhắm tịt mắt" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">An đói lả nhắm tịt mắt 🍜</p>
+          <span class="text-[8px] font-semibold text-amber-600 block text-center uppercase tracking-wider">Góc dìm An Phan</span>
+        </div>
+
+        <!-- 29. DAILY: Nanh ngủ chu môi hờn dỗi -->
+        <div class="gallery-item polaroid-card transform rotate-1" data-cat="daily" onclick="openLightboxByIndex(28)">
+          <div class="washi-tape"></div>
+          <div class="h-36 rounded-lg overflow-hidden bg-pink-100">
+            <img src="att.vJ7mnLYjIJc9ikIh0kHbUZaz6XvbqDmwesXvke2fMhA.JPG" alt="Nanh ngủ chu môi" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <p class="text-[10px] font-bold text-center text-slate-800 mt-2 truncate font-comic">Em bé hờn dỗi chuẩn bị ngủ 😴</p>
+          <span class="text-[8px] font-semibold text-emerald-600 block text-center uppercase tracking-wider">Đêm muộn</span>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- ENDING CARD (CHỐT TRUYỆN SIÊU RỰC RỠ & 20/10)                             -->
+    <!-- ========================================================================= -->
+    <section class="mt-12 px-4 pb-8 text-center">
+
+      <div class="webtoon-panel p-6 bg-gradient-to-b from-pink-50 via-rose-50 to-amber-50 border-4 border-deepLove shadow-2xl relative overflow-hidden">
+        
+        <div id="confettiTrigger" class="h-1 w-full"></div>
+
+        <div class="text-5xl mb-2 animate-bounce">
+          🎉💖🥰
+        </div>
+
+        <h3 class="text-2xl sm:text-3xl font-extrabold text-deepLove font-comic tracking-tight leading-snug">
+          HAPPY 3 MONTHS & 20/10!
+        </h3>
+        
+        <p class="text-base sm:text-lg font-bold text-rose-600 font-hand mt-1">
+          Thương Nanh nhiều lắmmm ❤️
+        </p>
+
+        <div class="mt-4 p-4 bg-white/95 rounded-2xl border border-pink-200 text-xs sm:text-sm text-pink-900 leading-relaxed font-medium shadow-inner">
+          <p>
+            Cảm ơn em vì đã là một phần đặc biệt nhất trong cuộc sống của anh suốt 3 tháng qua. Nhân ngày 20/10, anh chúc em bé của anh luôn luôn xinh đẹp, rạng rỡ, bình an và mãi nở nụ cười hạnh phúc bên cạnh anh nhé! Yêu em nhiều lắmmm! 💕
+          </p>
+        </div>
+
+        <!-- Nút Tương Tác: Gửi Ngàn Nụ Hôn Đến Nanh -->
+        <div class="mt-6 space-y-3">
+          <button onclick="sendKissesToNanh(event)" class="w-full py-4 bg-gradient-to-r from-pink-500 via-rose-500 to-deepLove text-white font-extrabold rounded-full shadow-lg hover:shadow-pink-300 active:scale-95 transition-all text-sm sm:text-base font-comic flex items-center justify-center gap-2">
+            <span>💖 Gửi ngàn nụ hôn đến Nanh 💋</span>
+          </button>
+
+          <a href="#chuong1" class="inline-block text-xs font-bold text-pink-500 hover:text-deepLove font-comic underline pt-2">
+            ↑ Đọc lại từ đầu
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Footer nhỏ -->
+      <footer class="mt-8 text-center text-xs text-pink-700/60 font-medium">
+        <p>To Be Continued... Từng trang mới vẫn đang được viết mỗi ngày ❤️</p>
+        <p class="text-[10px] mt-1">From An with all my love to Nanh • 3-Month Anniversary</p>
+      </footer>
+
+    </section>
+
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- LIGHTBOX MODAL NÂNG CẤP (NEXT/PREV, COUNTER, SWIPE & REACT HEART)        -->
+  <!-- ========================================================================= -->
+  <div id="lightboxModal" class="hidden fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex flex-col items-center justify-center p-3 transition-all duration-300" onclick="handleLightboxBackdrop(event)">
+    <div class="relative max-w-sm w-full bg-white rounded-3xl p-3 shadow-2xl overflow-hidden" onclick="event.stopPropagation()">
+      
+      <!-- Top Action Bar -->
+      <div class="flex items-center justify-between pb-2 px-1 border-b border-pink-100 mb-2">
+        <span id="lightboxCounter" class="text-[11px] font-bold text-deepLove bg-pink-100 px-2.5 py-0.5 rounded-full font-comic">
+          1 / 29
+        </span>
+        <button onclick="closeLightbox()" class="w-7 h-7 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center text-xs font-bold active:scale-90 shadow">
+          ✕
+        </button>
+      </div>
+
+      <!-- Full-Size Image Container with Navigation Arrows -->
+      <div class="relative w-full max-h-[62vh] rounded-2xl overflow-hidden bg-slate-950 flex items-center justify-center group">
+        <img id="lightboxImg" src="" alt="Full View" class="w-full h-auto max-h-[62vh] object-contain transition-transform duration-200">
+        
+        <!-- Prev Button -->
+        <button onclick="navLightbox(-1)" class="absolute left-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/50 text-white flex items-center justify-center text-sm font-bold active:scale-90 hover:bg-black/70 backdrop-blur-sm shadow z-10">
+          ❮
+        </button>
+
+        <!-- Next Button -->
+        <button onclick="navLightbox(1)" class="absolute right-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/50 text-white flex items-center justify-center text-sm font-bold active:scale-90 hover:bg-black/70 backdrop-blur-sm shadow z-10">
+          ❯
+        </button>
+      </div>
+
+      <!-- Caption & Heart Reaction -->
+      <div class="p-3 text-center flex items-center justify-between gap-2 mt-1">
+        <div class="text-left flex-1 min-w-0">
+          <p id="lightboxCaption" class="text-xs font-bold text-slate-800 font-comic truncate"></p>
+          <span id="lightboxCategory" class="text-[10px] text-pink-600 font-semibold block"></span>
+        </div>
+        
+        <button onclick="reactHeartLightbox(event)" class="flex items-center gap-1 bg-pink-50 text-deepLove px-3 py-1.5 rounded-full border border-pink-200 text-xs font-bold active:scale-90 transition flex-shrink-0 shadow-sm">
+          <span>💖</span>
+          <span id="lightboxHeartCount">99+</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- JAVASCRIPT LOGIC: AUDIO, FILTER, LIGHTBOX & CONFETTI                      -->
+  <!-- ========================================================================= -->
+  <script>
+    // 1. DATA OF ALL 29 PHOTOS
+    const photosData = [
+      { src: 'att.4B35W753UbGObBqlD_kluz-Yk-jju76mgTbW5JjuLrw.JPG', caption: 'Đêm xe máy định mệnh – Lời tỏ tình thành đôi 🛵💨', cat: 'vungtau', catName: 'Kỷ Niệm • Đêm Định Mệnh' },
+      { src: 'IMG_9812.JPG', caption: 'Nàng thơ Vũng Tàu làm tim anh lỡ nhịp ✨', cat: 'vungtau', catName: 'Vũng Tàu • Nàng Thơ' },
+      { src: 'att.vM2CgexBs3GZe9mWQOJGH8LEOdwJSRAV_e6jAYw0Fxc.JPG', caption: 'Em chụp sống ảo, anh nằm làm nền kkk 📸', cat: 'vungtau', catName: 'Vũng Tàu • Khách Sạn' },
+      { src: 'IMG_9565.jpg', caption: 'Cặp đôi mỏ vịt Vũng Tàu part 1 🦆', cat: 'vungtau', catName: 'Vũng Tàu • Nhí Nhố' },
+      { src: 'IMG_9566.jpg', caption: 'Cặp đôi mỏ vịt Vũng Tàu part 2 🦆', cat: 'vungtau', catName: 'Vũng Tàu • Nhí Nhố' },
+      { src: 'att.mi8_OPmUbNGKa9O-pQnRAoV1C9WYghvxP9DulJhOSiI.JPG', caption: 'Góc nghiêng dịu dàng cưng xỉu 💕', cat: 'vungtau', catName: 'Vũng Tàu • Khách Sạn' },
+      { src: 'att.ncvXeJW8spjINe2V_I_HIJR29l-07BnWqzIiCEyaUkc.JPG', caption: 'Má bánh bao chu môi chỉ muốn cắn 🥐', cat: 'vungtau', catName: 'Vũng Tàu • Khách Sạn' },
+      { src: 'att.OSRwvkP2lZKctLq506mAI3oDL-QEpSxpmHhpOVC68x8.JPG', caption: 'Tạo dáng nhí nhố phòng khách sạn ✌️', cat: 'vungtau', catName: 'Vũng Tàu • Khách Sạn' },
+      { src: 'att.2RpI_JXivwOSVTg2pYwGTSbxJm6ue8mz7ii9Krd1cno.JPG', caption: 'Check-in outfit xinh xắn Vũng Tàu 🪞', cat: 'vungtau', catName: 'Vũng Tàu • Khách Sạn' },
+      { src: 'IMG_9809.jpg', caption: 'Gương mặt kẻ say tình ngơ ngác 🤡', cat: 'vungtau', catName: 'Vũng Tàu • An Phan' },
+      { src: 'IMG_9837.jpg', caption: 'Lưu giữ từng góc nhỏ kỷ niệm 🏨', cat: 'vungtau', catName: 'Kỷ Niệm • Bên Nhau' },
+      { src: 'IMG_0278.JPG', caption: 'Tai heo & Cá mập xanh: Buồng hồng 🐷🦈', cat: 'photobooth', catName: 'Photobooth • Studio Hồng' },
+      { src: 'IMG_0279.JPG', caption: 'Nụ cười rực rỡ nhất hôm đi Photobooth 🥰', cat: 'photobooth', catName: 'Photobooth • Studio Hồng' },
+      { src: 'IMG_0283.JPG', caption: 'Ghép đôi trái tim ngọt ngào 💕', cat: 'photobooth', catName: 'Photobooth • Studio Hồng' },
+      { src: 'IMG_0285.JPG', caption: 'Cười tít mắt siêu ngọt ngào 🌸', cat: 'photobooth', catName: 'Photobooth • Studio Hồng' },
+      { src: 'att.ENpD5wsTP45a8HfjhrXXgjG17vuPExOKnwYGuOVZhO8.JPG', caption: 'Nanh kẹp tóc ngôi sao solo photobooth ⭐', cat: 'photobooth', catName: 'Photobooth • Studio Hồng' },
+      { src: 'IMG_0385.JPG', caption: 'Mèo nơ hồng & Gà con vàng: Buồng sao 🐱🐥', cat: 'photobooth', catName: 'Photobooth • Studio Ngàn Sao' },
+      { src: 'IMG_0386.JPG', caption: 'Tạo dáng cực ngầu bá cháy 😎', cat: 'photobooth', catName: 'Photobooth • Studio Ngàn Sao' },
+      { src: 'IMG_0390.JPG', caption: 'Cười thả ga quên lối về 🌟', cat: 'photobooth', catName: 'Photobooth • Studio Ngàn Sao' },
+      { src: 'IMG_0391.jpg', caption: 'Ánh mắt lấp lánh nhìn nhau 💫', cat: 'photobooth', catName: 'Photobooth • Studio Ngàn Sao' },
+      { src: 'IMG_0392.JPG', caption: 'Tung chiêu biểu cảm độc lạ 🤪', cat: 'photobooth', catName: 'Photobooth • Studio Ngàn Sao' },
+      { src: 'IMG_0393.JPG', caption: 'Đáng yêu khó đỡ trọn bộ 💖', cat: 'photobooth', catName: 'Photobooth • Studio Ngàn Sao' },
+      { src: 'att.KddoKIRfZsVYnUbKl8AxrdFua63ttn2ze9bDhz7m6xA.JPG', caption: 'Bó hoa pastel khổng lồ tặng em bé chu môi 💐', cat: 'daily', catName: 'Hẹn Hò • Quà Tặng' },
+      { src: 'IMG_0245.jpg', caption: 'Dạo phố đêm cầm đèn pha lê lấp lánh 🔮', cat: 'daily', catName: 'Hẹn Hò • Dạo Phố Đêm' },
+      { src: 'att.WJJVp0zrYL7D0gRVm6Op1vptfnAhPRIZaRJEozCdj1s.JPG', caption: 'Dán ngôi sao trên trán đi chuyến xe vi vu 🚌⭐', cat: 'daily', catName: 'Kỷ Niệm • Chuyến Xe' },
+      { src: 'IMG_9752.jpg', caption: 'Bình yên thức giấc bên em ☀️', cat: 'daily', catName: 'Kỷ Niệm • Sớm Mai' },
+      { src: 'att.RuQvDlcplUAgZbV9Tj16QDBJ7eRwgqJeepyjG7K0FEM.JPG', caption: 'Góc dìm cằm nọng kính cận vô giá kkk 😂', cat: 'daily', catName: 'Dìm Hàng • Nanh' },
+      { src: 'att.pvOv3yxr21uBYQYt3u5Ag4dOGfl1gMd5UnM0xLsA460.JPG', caption: 'Góc dìm An đói lả nhắm tịt mắt ở quán ăn 🍜', cat: 'daily', catName: 'Dìm Hàng • An' },
+      { src: 'att.vJ7mnLYjIJc9ikIh0kHbUZaz6XvbqDmwesXvke2fMhA.JPG', caption: 'Em bé chu môi hờn dỗi chuẩn bị ngủ 😴', cat: 'daily', catName: 'Kỷ Niệm • Đêm Muộn' }
+    ];
+
+    // 2. ÂM THANH NỀN & AUTOPLAY VỚI FALLBACK
+    const audio = document.getElementById('bgMusic');
+    const musicBtn = document.getElementById('musicBtn');
+    const musicBars = document.getElementById('musicBars');
+    const musicText = document.getElementById('musicText');
+    const musicToast = document.getElementById('musicToast');
+    let isPlaying = false;
+    let audioInitialized = false;
+
+    function setMusicState(playing) {
+      isPlaying = playing;
+      if (playing) {
+        musicBars.classList.remove('music-paused');
+        musicText.innerText = 'Tắt nhạc';
+        musicBtn.classList.add('border-rose-400', 'bg-pink-50');
+        if (musicToast) {
+          musicToast.style.opacity = '0';
+          setTimeout(() => musicToast.classList.add('hidden'), 300);
+        }
+      } else {
+        musicBars.classList.add('music-paused');
+        musicText.innerText = 'Bật nhạc';
+        musicBtn.classList.remove('border-rose-400', 'bg-pink-50');
+      }
+    }
+
+    function tryPlayAudio() {
+      if (isPlaying) return;
+      const playPromise = audio.play();
+      if (playPromise !== undefined) {
+        playPromise.then(() => {
+          setMusicState(true);
+          audioInitialized = true;
+        }).catch(err => {
+          setMusicState(false);
+          if (musicToast) musicToast.classList.remove('hidden');
+        });
+      }
+    }
+
+    function toggleAudio(e) {
+      if (e) e.stopPropagation();
+      if (isPlaying) {
+        audio.pause();
+        setMusicState(false);
+      } else {
+        tryPlayAudio();
+      }
+    }
+
+    function triggerMusicStart(e) {
+      if (e) e.stopPropagation();
+      tryPlayAudio();
+    }
+
+    window.addEventListener('DOMContentLoaded', tryPlayAudio);
+    window.addEventListener('load', tryPlayAudio);
+
+    const firstInteractionEvents = ['touchstart', 'touchend', 'click', 'scroll'];
+    function onFirstUserGesture() {
+      if (!audioInitialized || !isPlaying) {
+        tryPlayAudio();
+      }
+      firstInteractionEvents.forEach(evt => {
+        document.removeEventListener(evt, onFirstUserGesture);
+      });
+    }
+    firstInteractionEvents.forEach(evt => {
+      document.addEventListener(evt, onFirstUserGesture, { passive: true });
+    });
+
+    // 3. HIỆU ỨNG THẢ TIM KHI CHẠM MÀN HÌNH
+    function handleGlobalClick(e) {
+      spawnFloatingHeart(e.clientX, e.clientY);
+    }
+
+    function spawnFloatingHeart(x, y) {
+      const heart = document.createElement('div');
+      heart.className = 'tap-heart';
+      const emojis = ['💖', '🌸', '✨', '💕', '🥰', '🌷', '🎀'];
+      heart.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+      heart.style.left = x + 'px';
+      heart.style.top = y + 'px';
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 1200);
+    }
+
+    function burstHeartsCenter(e) {
+      if (e) e.stopPropagation();
+      if (navigator.vibrate) navigator.vibrate(25);
+      const centerX = window.innerWidth / 2;
+      const centerY = window.innerHeight / 2;
+      for (let i = 0; i < 8; i++) {
+        setTimeout(() => {
+          const offsetX = (Math.random() - 0.5) * 160;
+          const offsetY = (Math.random() - 0.5) * 160;
+          spawnFloatingHeart(centerX + offsetX, centerY + offsetY);
+        }, i * 70);
+      }
+    }
+
+    // 4. READING PROGRESS BAR & REVEAL ANIMATION ON SCROLL
+    const progressBar = document.getElementById('readProgressBar');
+    const revealPanels = document.querySelectorAll('.reveal-panel');
+    let confettiTriggered = false;
+
+    window.addEventListener('scroll', () => {
+      const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      if (progressBar) progressBar.style.width = scrolled + '%';
+
+      const windowHeight = window.innerHeight;
+      revealPanels.forEach(panel => {
+        const top = panel.getBoundingClientRect().top;
+        if (top < windowHeight * 0.88) {
+          panel.classList.add('is-visible');
+        }
+      });
+
+      const endingTrigger = document.getElementById('confettiTrigger');
+      if (endingTrigger && !confettiTriggered) {
+        const rect = endingTrigger.getBoundingClientRect();
+        if (rect.top < windowHeight) {
+          confettiTriggered = true;
+          fireEndingConfetti();
+        }
+      }
+    });
+
+    // 5. GALLERY FILTER CATEGORIES
+    let currentFilter = 'all';
+    function filterGallery(category) {
+      currentFilter = category;
+      const buttons = document.querySelectorAll('.filter-btn');
+      buttons.forEach(btn => {
+        if (btn.getAttribute('data-filter') === category) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+
+      const items = document.querySelectorAll('.gallery-item');
+      items.forEach(item => {
+        const cat = item.getAttribute('data-cat');
+        if (category === 'all' || cat === category) {
+          item.classList.remove('hidden');
+        } else {
+          item.classList.add('hidden');
+        }
+      });
+    }
+
+    // 6. LIGHTBOX MODAL WITH NAVIGATION & SWIPE
+    let currentLightboxIndex = 0;
+    let currentHeartCount = 99;
+
+    function openLightboxByIndex(index) {
+      currentLightboxIndex = index;
+      updateLightboxContent();
+      document.getElementById('lightboxModal').classList.remove('hidden');
+      burstHeartsCenter();
+    }
+
+    function updateLightboxContent() {
+      const data = photosData[currentLightboxIndex];
+      const img = document.getElementById('lightboxImg');
+      const cap = document.getElementById('lightboxCaption');
+      const cat = document.getElementById('lightboxCategory');
+      const counter = document.getElementById('lightboxCounter');
+      const count = document.getElementById('lightboxHeartCount');
+
+      img.src = data.src;
+      cap.innerText = data.caption;
+      cat.innerText = data.catName;
+      counter.innerText = `${currentLightboxIndex + 1} / ${photosData.length}`;
+      currentHeartCount = Math.floor(Math.random() * 40) + 80;
+      count.innerText = currentHeartCount;
+    }
+
+    function navLightbox(direction) {
+      currentLightboxIndex += direction;
+      if (currentLightboxIndex < 0) {
+        currentLightboxIndex = photosData.length - 1;
+      } else if (currentLightboxIndex >= photosData.length) {
+        currentLightboxIndex = 0;
+      }
+      updateLightboxContent();
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightboxModal').classList.add('hidden');
+    }
+
+    function handleLightboxBackdrop(e) {
+      closeLightbox();
+    }
+
+    function reactHeartLightbox(e) {
+      if (e) e.stopPropagation();
+      if (navigator.vibrate) navigator.vibrate(30);
+      currentHeartCount++;
+      document.getElementById('lightboxHeartCount').innerText = currentHeartCount;
+      spawnFloatingHeart(e.clientX, e.clientY);
+    }
+
+    // Keyboard navigation for Lightbox
+    window.addEventListener('keydown', (e) => {
+      const modal = document.getElementById('lightboxModal');
+      if (modal.classList.contains('hidden')) return;
+      if (e.key === 'ArrowLeft') navLightbox(-1);
+      if (e.key === 'ArrowRight') navLightbox(1);
+      if (e.key === 'Escape') closeLightbox();
+    });
+
+    // Touch Swipe for Lightbox on Mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+    const lightboxModalEl = document.getElementById('lightboxModal');
+    lightboxModalEl.addEventListener('touchstart', e => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+    lightboxModalEl.addEventListener('touchend', e => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleLightboxSwipe();
+    }, { passive: true });
+
+    function handleLightboxSwipe() {
+      if (touchEndX < touchStartX - 50) {
+        navLightbox(1); // Swipe left -> Next
+      }
+      if (touchEndX > touchStartX + 50) {
+        navLightbox(-1); // Swipe right -> Prev
+      }
+    }
+
+    // 7. GỬI NGÀN NỤ HÔN ĐẾN NANH
+    function sendKissesToNanh(e) {
+      if (e) e.stopPropagation();
+      if (navigator.vibrate) navigator.vibrate([40, 30, 80, 40]);
+      fireEndingConfetti();
+
+      for (let i = 0; i < 20; i++) {
+        setTimeout(() => {
+          const x = Math.random() * window.innerWidth;
+          const y = window.innerHeight * 0.7 + (Math.random() - 0.5) * 100;
+          spawnFloatingHeart(x, y);
+        }, i * 60);
+      }
+    }
+
+    function fireEndingConfetti() {
+      const count = 200;
+      const defaults = { origin: { y: 0.7 } };
+
+      function fire(particleRatio, opts) {
+        confetti(Object.assign({}, defaults, opts, {
+          particleCount: Math.floor(count * particleRatio)
+        }));
+      }
+
+      fire(0.25, { spread: 26, startVelocity: 55, colors: ['#ff758f', '#ffb3c1'] });
+      fire(0.2, { spread: 60, colors: ['#c9184a', '#ffffff'] });
+      fire(0.35, { spread: 100, decay: 0.91, scalar: 0.8 });
+      fire(0.1, { spread: 120, startVelocity: 25, decay: 0.92, colors: ['#ffe5ec', '#ffd166'] });
+    }
+  </script>
+</body>
+</html>
